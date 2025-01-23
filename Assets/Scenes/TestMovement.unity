@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137554379}
   - component: {fileID: 137554378}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,6 +770,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138ae6710eb22de47aaf777d20839239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveStats: {fileID: 11400000, guid: 66dcceb8c2ca5d5498dbfbbd5e9861e8, type: 2}
+  _bodyColl: {fileID: 693354659}
+  _feetColl: {fileID: 219749003}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

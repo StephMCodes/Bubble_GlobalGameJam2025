@@ -12,7 +12,7 @@ public class MvtPlayer : MonoBehaviour
     [SerializeField] private Collider2D _feetColl;
 
     //to access the rigidbody and assign it our physics
-    private Rigidbody _rb;
+    private Rigidbody2D _rb;
 
     //mvt vars
     private Vector2 _moveVelocity;
@@ -28,7 +28,7 @@ public class MvtPlayer : MonoBehaviour
     private void Awake()
     {
         //init.bool and get component rb
-        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody2D>();
         _isFacingRight = true;
     }
 
