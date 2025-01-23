@@ -32,6 +32,21 @@ public class MvtPlayer : MonoBehaviour
         _isFacingRight = true;
     }
 
+    private void FixedUpdate() //fixed allows for more consistency
+    {
+        CollisionChecks();
+
+        if (_isGrounded )
+        {
+            Move(MoveStats.GroundAcceleration, MoveStats.GroundDeceleration, InputManager.Movement);
+        }
+        else
+        {
+            Move(MoveStats.AirAcceleration, MoveStats.AirDeceleration, InputManager.Movement);
+
+        }
+    }
+
     #region Movement
 
     private void Move(float acceleration, float deceleration, Vector2 moveInput)
@@ -39,6 +54,8 @@ public class MvtPlayer : MonoBehaviour
         if (moveInput != Vector2.zero)
         {
             //check for player turning
+            TurnCheck(moveInput);
+
             Vector2 targetVelocity = Vector2.zero;
             //check for run speed or walk speed
             if (InputManager.RunHeld)
@@ -58,18 +75,68 @@ public class MvtPlayer : MonoBehaviour
             _rb.velocity = new Vector2(_moveVelocity.x, _moveVelocity.y);
         }
         else if (moveInput == Vector2.zero) //if mvt is zero
-        {      
+        {
             _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
             _rb.velocity = new Vector2(_moveVelocity.x, _moveVelocity.y);
 
         }
 
     }
+
+    private void TurnCheck(Vector2 moveInput)
+    {
+        //based off direction and input determine facing left or right
+        if (_isFacingRight && moveInput.x <0)
+        {
+            Turn(false);
+        }
+        else if (!_isFacingRight && moveInput.x > 0)
+        {
+            Turn(true);
+        }
+    }
+
+    private void Turn(bool turnRight)
+    {
+        if (turnRight)
+        {
+            _isFacingRight = true;
+            transform.Rotate(0f,180f,0f);
+        }
+        else
+        {
+            _isFacingRight = false;
+            transform.Rotate(0f, -180f, 0f);
+        }
+    }
+
+
     #endregion
 
-    // Update is called once per frame
-    void Update()
+    #region Collision Checks
+
+    private void IsGrounded()
     {
-        
+        Vector2 boxCastOrigin = new Vector2(_feetColl.bounds.center.x, _feetColl.bounds.min.y);
+        Vector2 boxCastSize = new Vector2 (_feetColl.bounds.size.x, MoveStats.GroundDetectionRaycastLength);
+
+        //cast ray
+        _groundHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.down, MoveStats.GroundDetectionRaycastLength, MoveStats.GroundLayer);
+        //if it finds ground collider we are grounded and vice versa
+        if (_groundHit.collider != null)
+        {
+            _isGrounded = true;
+        }
+        else
+        {
+            _isGrounded = false;
+        }
+    
     }
+
+    private void CollisionChecks()
+    {
+        IsGrounded();
+    }
+    #endregion
 }
