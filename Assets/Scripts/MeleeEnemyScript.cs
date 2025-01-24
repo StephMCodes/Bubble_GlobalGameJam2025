@@ -6,9 +6,10 @@ public class MeleeEnemy : MonoBehaviour
 {
     [SerializeField] private float _attackCooldown;
     [SerializeField] private float _damage;
+    [SerializeField] private float _range;
     private float _cooldownTimer = Mathf.Infinity;
 
-    [SerializeField] private CircleCollider2D _circleCollider;
+    [SerializeField] private BoxCollider2D _boxCollider;
     [SerializeField] private LayerMask _playerLayer;
 
 
@@ -25,9 +26,10 @@ public class MeleeEnemy : MonoBehaviour
         }
     }
 
-    private bool SeesPlayer()
+    private bool SeesPlayer()  
     {
-        RaycastHit2D hit = Physics2D.BoxCast(_circleCollider.bounds.center, _circleCollider.bounds.size,0, Vector2.left, 0, _playerLayer);
+       //enemy range of sight
+        RaycastHit2D hit = Physics2D.BoxCast(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x, _boxCollider.bounds.size,0, Vector2.left, 0, _playerLayer);
         return hit.collider != null;
     }
 
