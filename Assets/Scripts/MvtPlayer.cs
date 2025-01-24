@@ -59,7 +59,7 @@ public class MvtPlayer : MonoBehaviour
     {
         CountTimers();
         JumpChecks();
-        Debug.Log(_isPastApexThreshold);
+        //Debug.Log(_isPastApexThreshold);
     }
     private void FixedUpdate() //fixed allows for more consistency
     {
@@ -370,12 +370,12 @@ public class MvtPlayer : MonoBehaviour
         if (_groundHit.collider != null)
         {
             _isGrounded = true;
-            Debug.Log("Grounded");
+           // Debug.Log("Grounded");
         }
         else
         {
             _isGrounded = false;
-            Debug.Log("NOT Grounded");
+           // Debug.Log("NOT Grounded");
 
         }
 
