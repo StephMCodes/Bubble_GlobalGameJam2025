@@ -12,6 +12,7 @@ public class Parallax : MonoBehaviour
     public bool scrolling_vertical;
     Vector2 length;
     Vector3 startposition;
+
     // Start is called before the first frame update
     void Start()
     {
