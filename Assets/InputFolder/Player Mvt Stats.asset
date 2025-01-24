@@ -15,8 +15,8 @@ MonoBehaviour:
   MaxWalkSpeed: 12.5
   GroundAcceleration: 5
   GroundDeceleration: 20
-  AirAcceleration: 4.4
-  AirDeceleration: 7.6
+  AirAcceleration: 2.5
+  AirDeceleration: 6.3
   MaxRunSpeed: 20
   GroundLayer:
     serializedVersion: 2
