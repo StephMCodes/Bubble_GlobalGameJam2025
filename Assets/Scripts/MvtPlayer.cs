@@ -61,6 +61,13 @@ public class MvtPlayer : MonoBehaviour
         JumpChecks();
         //Debug.Log(_isPastApexThreshold);
     }
+
+    //heal method to access through Healing script
+    public void Heal(int healAmount)
+    {
+        //references health system 
+        HeartHealthVisual.heartHealthSysytemStatic.Heal(healAmount); 
+    }
     private void FixedUpdate() //fixed allows for more consistency
     {
         CollisionChecks();
