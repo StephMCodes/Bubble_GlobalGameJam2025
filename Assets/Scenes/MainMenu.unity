@@ -732,7 +732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Stephanie Michiu - Programmer and Level design
+  m_text: 'Stephanie M. - Programmer and Level design
 
     Aiden Olivera - Animator
     and 2D Character Art
@@ -1955,7 +1955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1084119763
 RectTransform:
   m_ObjectHideFlags: 0
