@@ -70,8 +70,8 @@ public class MvtStats : ScriptableObject
 
     private void CalculateValues()
     {
-        AdjustedJumpHeight = JumpHeight * JumpHeightCompensationFactor;
-        Gravity = -(2f * AdjustedJumpHeight) / Mathf.Pow(TimeUntilJumpApex, 2f);
+        //AdjustedJumpHeight = JumpHeight * JumpHeightCompensationFactor;
+        Gravity = -(2f * JumpHeight) / Mathf.Pow(TimeUntilJumpApex, 2f);
         InitialJumpVelocity = Mathf.Abs(Gravity) * TimeUntilJumpApex;
     }
 

@@ -59,12 +59,12 @@ public class MvtPlayer : MonoBehaviour
     {
         CountTimers();
         JumpChecks();
-        Debug.Log(_isGrounded);
     }
     private void FixedUpdate() //fixed allows for more consistency
     {
         CollisionChecks();
         Jump();
+        //Debug.Log("Move Input: " + InputManager.Movement);
 
         if (_isGrounded)
         {
@@ -308,12 +308,12 @@ public class MvtPlayer : MonoBehaviour
             _moveVelocity = Vector2.Lerp(_moveVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
 
             //apply to rigidbody
-            _rb.velocity = new Vector2(_moveVelocity.x, _moveVelocity.y);
+            _rb.velocity = new Vector2(_moveVelocity.x, _rb.velocity.y);
         }
         else if (moveInput == Vector2.zero) //if mvt is zero
         {
             _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
-            _rb.velocity = new Vector2(_moveVelocity.x, _moveVelocity.y);
+            _rb.velocity = new Vector2(_moveVelocity.x, _rb.velocity.y);
 
         }
 
@@ -356,16 +356,22 @@ public class MvtPlayer : MonoBehaviour
         Vector2 boxCastOrigin = new Vector2(_feetColl.bounds.center.x, _feetColl.bounds.min.y);
         Vector2 boxCastSize = new Vector2(_feetColl.bounds.size.x, MoveStats.GroundDetectionRaycastLength);
 
+        //draw the ray
+        Debug.DrawRay(boxCastOrigin, Vector2.down * MoveStats.GroundDetectionRaycastLength, Color.red);
+
         //cast ray
         _groundHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.down, MoveStats.GroundDetectionRaycastLength, MoveStats.GroundLayer);
         //if it finds ground collider we are grounded and vice versa
         if (_groundHit.collider != null)
         {
             _isGrounded = true;
+            Debug.Log("Grounded");
         }
         else
         {
             _isGrounded = false;
+            Debug.Log("NOT Grounded");
+
         }
 
     }
