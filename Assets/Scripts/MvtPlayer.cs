@@ -363,7 +363,6 @@ public class MvtPlayer : MonoBehaviour
 
         //draw the ray
         Debug.DrawRay(boxCastOrigin, Vector2.down * MoveStats.GroundDetectionRaycastLength, Color.red);
-
         //cast ray
         _groundHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.down, MoveStats.GroundDetectionRaycastLength, MoveStats.GroundLayer);
         //if it finds ground collider we are grounded and vice versa
