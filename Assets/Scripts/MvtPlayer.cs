@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MvtPlayer : MonoBehaviour
 {
@@ -24,6 +26,26 @@ public class MvtPlayer : MonoBehaviour
     private bool _isGrounded;
     private bool bumpedHead;
 
+    //jump vars
+    public float VerticalVelocity { get; private set; }
+    private bool _isJumping;
+    private bool _isFastFalling;
+    private bool _isFalling;
+    private float _fastFallTime;
+    private float _fastFallReleaseSpeed;
+    private float _numOfJumpsUsed;
+
+    //apex vars
+    private float _apexPoint;
+    private float _timePastApexThreshold;
+    private bool _isPastApexThreshold;
+
+    //jump buffer vars
+    private float _jumpBufferTimer;
+    private bool _jumpReleasedDuringBuffer; //bool?
+
+    //coyote time vars
+    private float _coyoteTimer;
 
     private void Awake()
     {
@@ -32,11 +54,18 @@ public class MvtPlayer : MonoBehaviour
         _isFacingRight = true;
     }
 
+    //checking for jump happens in update and jump happens in fixed
+    private void Update()
+    {
+        CountTimers();
+        JumpChecks();
+    }
     private void FixedUpdate() //fixed allows for more consistency
     {
         CollisionChecks();
+        Jump();
 
-        if (_isGrounded )
+        if (_isGrounded)
         {
             Move(MoveStats.GroundAcceleration, MoveStats.GroundDeceleration, InputManager.Movement);
         }
@@ -46,6 +75,206 @@ public class MvtPlayer : MonoBehaviour
 
         }
     }
+    #region Jump
+
+    private void JumpChecks()
+    {
+        //button pressed
+        if (InputManager.JumpPressed)
+        {
+            _jumpBufferTimer = MoveStats.JumpBufferTime;
+            _jumpReleasedDuringBuffer = false;
+        }
+
+        //button released
+        if (InputManager.JumpReleased)
+        {
+            if (_jumpBufferTimer > 0f)
+            {
+                _jumpReleasedDuringBuffer = true;
+            }
+
+            if (_isJumping && VerticalVelocity > 0f)
+            {
+                if (_isPastApexThreshold)
+                {
+                    //reset flags
+                    _isPastApexThreshold = false;
+                    _isFastFalling = true;
+                    _fastFallTime = MoveStats.TimeForUpwardsCancel;
+                    VerticalVelocity = 0f; //reduce floatyness to change direction
+                }
+                else
+                {
+                    _isFastFalling = true;
+                    _fastFallReleaseSpeed = VerticalVelocity;
+                }
+            }
+            //begin jump mvt with buffre + coyote time
+            if (!_isJumping && _jumpBufferTimer > 0f && (_isGrounded || _coyoteTimer > 0f))
+            {
+                InitiateJump(1);
+
+
+            }
+            //double or extra jumps
+            else if (_isJumping && _jumpBufferTimer > 0f && _numOfJumpsUsed < MoveStats.NumJumpsAllowed)
+            {
+                _isFastFalling = false;
+                InitiateJump(1);
+            }
+            //handle jump after coyote time is over so we cant fall and get a double jump
+            else if (_isFalling && _jumpBufferTimer > 0f && _numOfJumpsUsed < MoveStats.NumJumpsAllowed)
+            {
+                InitiateJump(2);
+                _isFastFalling = false;
+            }
+
+            //check landing
+            if (VerticalVelocity <= 0f && _isGrounded && (_isJumping || _isFalling))
+            {
+                //reset all flags timers and used jumps and reset gravity
+                _isJumping = false;
+                _isFalling = false;
+                _isFastFalling = false;
+                _fastFallTime = 0f;
+                _numOfJumpsUsed = 0;
+                VerticalVelocity = Physics2D.gravity.y;
+            }
+        }
+    }
+
+    private void InitiateJump(int numOfJumpsUsed)
+    {
+        //set flag
+        if (!_isJumping)
+        {
+            _isJumping = true;
+        }
+        //bunny hop if press and release same time
+        _jumpBufferTimer = 0f;
+        _numOfJumpsUsed += _numOfJumpsUsed;
+        VerticalVelocity = MoveStats.InitialJumpVelocity;
+        //reset buffer
+        _jumpBufferTimer = 0f;
+
+        //increment used jumps
+        _numOfJumpsUsed += numOfJumpsUsed;
+
+        //set velocity to initial velocity
+        VerticalVelocity = MoveStats.InitialJumpVelocity;
+    }
+    private void Jump()
+    {
+        //apply gravity
+        if (_isJumping)
+        {
+            //check for head bump
+            if (bumpedHead)
+            {
+                _isFastFalling = true;
+            }
+            //gravity upon ascending
+            if (VerticalVelocity >= 0f)
+            {
+                //apex controls
+                _apexPoint = Mathf.InverseLerp(MoveStats.InitialJumpVelocity, 0f, VerticalVelocity);
+                if (_apexPoint > MoveStats.ApexThreshold)
+                {
+                    if (!_isPastApexThreshold)
+                    {
+                        _isPastApexThreshold = true;
+                        //reset values
+                        _timePastApexThreshold = 0f;
+                    }
+
+                    if (_isPastApexThreshold)
+                    {
+                        //increment timer
+                        _timePastApexThreshold += Time.fixedDeltaTime;
+                        //hang time
+                        if (_timePastApexThreshold < MoveStats.ApexHangTime)
+                        {
+                            //hang
+                            VerticalVelocity = 0f;
+                        }
+                        else
+                        {
+                            //hangtime over begin falling
+                            VerticalVelocity = -0.01f;
+                        }
+                    }
+                }
+
+                //gravity upon asc but not past apex point
+                else
+                {
+                    VerticalVelocity += MoveStats.Gravity * Time.fixedDeltaTime;
+                    if (_isPastApexThreshold)
+                    {
+                        _isPastApexThreshold = false; //reset flag
+                    }
+                }
+            }
+
+            //descending
+            //can be without multiplier for game feel //
+            else if (!_isFastFalling)
+            {
+                VerticalVelocity += MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+            }
+
+            else if (VerticalVelocity < 0f)
+            {
+                _isFalling = true;
+            }
+        }
+
+        //jump cut
+        if (_isFastFalling)
+        {
+            if (_fastFallTime >= MoveStats.TimeForUpwardsCancel)
+            {
+                VerticalVelocity += MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+            }
+            else if (_fastFallTime < MoveStats.TimeForUpwardsCancel)
+            //APPLY JUMP CUT
+            {
+                VerticalVelocity = Mathf.Lerp(_fastFallReleaseSpeed, 0f, (_fastFallTime / MoveStats.TimeForUpwardsCancel));
+            }
+
+            _fastFallTime += Time.fixedDeltaTime;
+        }
+
+        //falling gravity for falling
+        if (_isGrounded && !_isJumping)
+        {
+            if (!_isFalling)
+            {
+                _isFalling = true;
+            }
+
+            VerticalVelocity += MoveStats.Gravity * Time.fixedDeltaTime;
+        }
+
+        //clamp fall speed and apply to rb
+        VerticalVelocity = Mathf.Clamp(VerticalVelocity, -MoveStats.MaxFallSpeed, 50f);
+        _rb.velocity = new Vector2(_rb.velocity.x, VerticalVelocity);
+    }
+    #endregion
+
+    #region Timers
+
+    private void CountTimers()
+    {
+        _jumpBufferTimer -= Time.deltaTime;
+        if (!_isGrounded)
+        {
+            _coyoteTimer -= Time.deltaTime;
+        }
+        else { _coyoteTimer = MoveStats.JumpCoyoteTime; }
+    }
+    #endregion
 
     #region Movement
 
@@ -86,7 +315,7 @@ public class MvtPlayer : MonoBehaviour
     private void TurnCheck(Vector2 moveInput)
     {
         //based off direction and input determine facing left or right
-        if (_isFacingRight && moveInput.x <0)
+        if (_isFacingRight && moveInput.x < 0)
         {
             Turn(false);
         }
@@ -101,7 +330,7 @@ public class MvtPlayer : MonoBehaviour
         if (turnRight)
         {
             _isFacingRight = true;
-            transform.Rotate(0f,180f,0f);
+            transform.Rotate(0f, 180f, 0f);
         }
         else
         {
@@ -118,7 +347,7 @@ public class MvtPlayer : MonoBehaviour
     private void IsGrounded()
     {
         Vector2 boxCastOrigin = new Vector2(_feetColl.bounds.center.x, _feetColl.bounds.min.y);
-        Vector2 boxCastSize = new Vector2 (_feetColl.bounds.size.x, MoveStats.GroundDetectionRaycastLength);
+        Vector2 boxCastSize = new Vector2(_feetColl.bounds.size.x, MoveStats.GroundDetectionRaycastLength);
 
         //cast ray
         _groundHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.down, MoveStats.GroundDetectionRaycastLength, MoveStats.GroundLayer);
@@ -131,7 +360,7 @@ public class MvtPlayer : MonoBehaviour
         {
             _isGrounded = false;
         }
-    
+
     }
 
     private void CollisionChecks()
