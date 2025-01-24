@@ -24,7 +24,7 @@ public class MvtPlayer : MonoBehaviour
     private RaycastHit2D _groundHit;
     private RaycastHit2D _headHit;
     private bool _isGrounded;
-    private bool bumpedHead;
+    private bool _bumpedHead;
 
     //jump vars
     public float VerticalVelocity { get; private set; }
@@ -42,7 +42,7 @@ public class MvtPlayer : MonoBehaviour
 
     //jump buffer vars
     private float _jumpBufferTimer;
-    private bool _jumpReleasedDuringBuffer; //bool?
+    private bool _jumpReleasedDuringBuffer; //bool
 
     //coyote time vars
     private float _coyoteTimer;
@@ -59,6 +59,7 @@ public class MvtPlayer : MonoBehaviour
     {
         CountTimers();
         JumpChecks();
+        Debug.Log(_isGrounded);
     }
     private void FixedUpdate() //fixed allows for more consistency
     {
@@ -72,7 +73,6 @@ public class MvtPlayer : MonoBehaviour
         else
         {
             Move(MoveStats.AirAcceleration, MoveStats.AirDeceleration, InputManager.Movement);
-
         }
     }
     #region Jump
@@ -110,39 +110,47 @@ public class MvtPlayer : MonoBehaviour
                     _fastFallReleaseSpeed = VerticalVelocity;
                 }
             }
-            //begin jump mvt with buffre + coyote time
-            if (!_isJumping && _jumpBufferTimer > 0f && (_isGrounded || _coyoteTimer > 0f))
-            {
-                InitiateJump(1);
+        }
+        //begin jump mvt with buffer + coyote time
+        if (!_isJumping && _jumpBufferTimer > 0f && (_isGrounded || _coyoteTimer > 0f))
+        {
+            InitiateJump(1);
 
-
-            }
-            //double or extra jumps
-            else if (_isJumping && _jumpBufferTimer > 0f && _numOfJumpsUsed < MoveStats.NumJumpsAllowed)
+            //bunny hop if press and release same time
+            if (_jumpReleasedDuringBuffer)
             {
-                _isFastFalling = false;
-                InitiateJump(1);
-            }
-            //handle jump after coyote time is over so we cant fall and get a double jump
-            else if (_isFalling && _jumpBufferTimer > 0f && _numOfJumpsUsed < MoveStats.NumJumpsAllowed)
-            {
-                InitiateJump(2);
-                _isFastFalling = false;
-            }
-
-            //check landing
-            if (VerticalVelocity <= 0f && _isGrounded && (_isJumping || _isFalling))
-            {
-                //reset all flags timers and used jumps and reset gravity
-                _isJumping = false;
-                _isFalling = false;
-                _isFastFalling = false;
-                _fastFallTime = 0f;
-                _numOfJumpsUsed = 0;
-                VerticalVelocity = Physics2D.gravity.y;
+                _isFastFalling = true;
+                _fastFallReleaseSpeed = VerticalVelocity;
             }
         }
+        //double or extra jumps
+        else if (_isJumping && _jumpBufferTimer > 0f && _numOfJumpsUsed < MoveStats.NumJumpsAllowed)
+        {
+            _isFastFalling = false;
+            InitiateJump(1);
+        }
+        //handle jump after coyote time is over so we cant fall and then get a double jump from it
+        else if (_isFalling && _jumpBufferTimer > 0f && _numOfJumpsUsed < MoveStats.NumJumpsAllowed - 1) ////////
+        {
+            InitiateJump(2);
+            _isFastFalling = false;
+        }
+
+        //check landing
+        if (VerticalVelocity <= 0f && _isGrounded && (_isJumping || _isFalling))
+        {
+            //reset all flags timers and used jumps and reset gravity
+            _isJumping = false;
+            _isFalling = false;
+            _isFastFalling = false;
+            _isPastApexThreshold = false;
+            _fastFallTime = 0f;
+            _numOfJumpsUsed = 0;
+            VerticalVelocity = Physics2D.gravity.y;
+        }
     }
+
+
 
     private void InitiateJump(int numOfJumpsUsed)
     {
@@ -151,10 +159,9 @@ public class MvtPlayer : MonoBehaviour
         {
             _isJumping = true;
         }
-        //bunny hop if press and release same time
-        _jumpBufferTimer = 0f;
-        _numOfJumpsUsed += _numOfJumpsUsed;
-        VerticalVelocity = MoveStats.InitialJumpVelocity;
+        //_jumpBufferTimer = 0f;
+        //_numOfJumpsUsed += _numOfJumpsUsed;
+        //VerticalVelocity = MoveStats.InitialJumpVelocity;
         //reset buffer
         _jumpBufferTimer = 0f;
 
@@ -170,7 +177,7 @@ public class MvtPlayer : MonoBehaviour
         if (_isJumping)
         {
             //check for head bump
-            if (bumpedHead)
+            if (_bumpedHead)
             {
                 _isFastFalling = true;
             }
@@ -195,7 +202,7 @@ public class MvtPlayer : MonoBehaviour
                         //hang time
                         if (_timePastApexThreshold < MoveStats.ApexHangTime)
                         {
-                            //hang
+                            //hangtime
                             VerticalVelocity = 0f;
                         }
                         else
@@ -235,7 +242,7 @@ public class MvtPlayer : MonoBehaviour
         {
             if (_fastFallTime >= MoveStats.TimeForUpwardsCancel)
             {
-                VerticalVelocity += MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+                VerticalVelocity += MoveStats.Gravity * MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
             }
             else if (_fastFallTime < MoveStats.TimeForUpwardsCancel)
             //APPLY JUMP CUT
@@ -247,7 +254,7 @@ public class MvtPlayer : MonoBehaviour
         }
 
         //falling gravity for falling
-        if (_isGrounded && !_isJumping)
+        if (!_isGrounded && !_isJumping)
         {
             if (!_isFalling)
             {
@@ -363,9 +370,29 @@ public class MvtPlayer : MonoBehaviour
 
     }
 
+    private void BumpedHead()
+    {
+        Vector2 boxCastOrigin = new Vector2(_feetColl.bounds.center.x, _bodyColl.bounds.max.y);
+        Vector2 boxCastSize = new Vector2(_feetColl.bounds.size.x * MoveStats.HeadWidth, MoveStats.HeadDetectionRaycastLength);
+
+        //cast ray
+        _headHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.up, MoveStats.HeadDetectionRaycastLength, MoveStats.GroundLayer);
+        //if it finds ground collider we are grounded and vice versa
+        if (_headHit.collider != null)
+        {
+            _bumpedHead = true;
+        }
+        else
+        {
+            _bumpedHead = false;
+        }
+
+    }
+
     private void CollisionChecks()
     {
         IsGrounded();
+        BumpedHead();
     }
     #endregion
 }
