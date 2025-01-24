@@ -59,6 +59,7 @@ public class MvtPlayer : MonoBehaviour
     {
         CountTimers();
         JumpChecks();
+        Debug.Log(_isPastApexThreshold);
     }
     private void FixedUpdate() //fixed allows for more consistency
     {
@@ -186,6 +187,7 @@ public class MvtPlayer : MonoBehaviour
             {
                 //apex controls
                 _apexPoint = Mathf.InverseLerp(MoveStats.InitialJumpVelocity, 0f, VerticalVelocity);
+
                 if (_apexPoint > MoveStats.ApexThreshold)
                 {
                     if (!_isPastApexThreshold)
@@ -228,12 +230,15 @@ public class MvtPlayer : MonoBehaviour
             //can be without multiplier for game feel //
             else if (!_isFastFalling)
             {
-                VerticalVelocity += MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+                VerticalVelocity += MoveStats.Gravity * MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
             }
 
             else if (VerticalVelocity < 0f)
             {
-                _isFalling = true;
+                if (!_isFalling)
+                {
+                    _isFalling = true;
+                }
             }
         }
 
