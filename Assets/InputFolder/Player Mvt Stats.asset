@@ -15,8 +15,8 @@ MonoBehaviour:
   MaxWalkSpeed: 12.5
   GroundAcceleration: 5
   GroundDeceleration: 20
-  AirAcceleration: 5
-  AirDeceleration: 5
+  AirAcceleration: 4.4
+  AirDeceleration: 7.6
   MaxRunSpeed: 20
   GroundLayer:
     serializedVersion: 2
@@ -28,7 +28,7 @@ MonoBehaviour:
   JumpHeightCompensationFactor: 1.054
   TimeUntilJumpApex: 0.35
   GravityOnReleaseMultiplier: 2
-  MaxFallSpeed: 26
+  MaxFallSpeed: 10
   NumJumpsAllowed: 2
   TimeForUpwardsCancel: 0.027
   ApexThreshold: 0.97
