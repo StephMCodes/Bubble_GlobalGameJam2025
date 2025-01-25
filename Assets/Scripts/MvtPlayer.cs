@@ -17,6 +17,8 @@ public class MvtPlayer : MonoBehaviour
 
     //to access the rigidbody and assign it our physics
     private Rigidbody2D _rb;
+    //access anims
+    private Animator _animator;
 
     //call heart class
     public HeartHealthSystem TheHealthSystemBackend;
@@ -57,7 +59,10 @@ public class MvtPlayer : MonoBehaviour
     {
         //init.bool and get component rb
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         _isFacingRight = true;
+        _animator.SetBool("isWalking", true);
+
     }
 
     //checking for jump happens in update and jump happens in fixed
@@ -65,7 +70,16 @@ public class MvtPlayer : MonoBehaviour
     {
         CountTimers();
         JumpChecks();
+        if (_isJumping)
+        {
+            _animator.SetBool("isJump", true);
+        }
+        else
+        {
+            _animator.SetBool("isJump", false);
+        }
         //Debug.Log(_isPastApexThreshold);
+        Debug.Log(_isJumping);
     }
 
     //heal method to access through Healing script
@@ -342,6 +356,7 @@ public class MvtPlayer : MonoBehaviour
         {
             _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
             _rb.velocity = new Vector2(_moveVelocity.x, _rb.velocity.y);
+            _animator.SetBool("isWalking", false);
 
         }
 
