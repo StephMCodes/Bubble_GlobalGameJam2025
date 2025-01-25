@@ -338,10 +338,12 @@ public class MvtPlayer : MonoBehaviour
             //check for run speed or walk speed
             if (InputManager.RunHeld)
             {
+                _animator.SetBool("isWalking", true);
                 targetVelocity = new Vector2(moveInput.x, 0f) * MoveStats.MaxRunSpeed;
             }
             else
             {
+                _animator.SetBool("isWalking", false);
                 targetVelocity = new Vector2(moveInput.x, 0f) * MoveStats.MaxWalkSpeed;
             }
 
@@ -407,12 +409,12 @@ public class MvtPlayer : MonoBehaviour
         if (_groundHit.collider != null)
         {
             _isGrounded = true;
-           // Debug.Log("Grounded");
+            // Debug.Log("Grounded");
         }
         else
         {
             _isGrounded = false;
-           // Debug.Log("NOT Grounded");
+            // Debug.Log("NOT Grounded");
 
         }
 

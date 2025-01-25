@@ -10,8 +10,8 @@ public class HeartHealthSystem
     public event EventHandler OnHealed;
     public event EventHandler OnDead;
 
-    
 
+    public GameObject player;
 
 
     private List<Heart> heartList;
