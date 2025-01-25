@@ -23,11 +23,13 @@ public class MeleeEnemy : MonoBehaviour
     //private Animator anim;
 
     private EnemyPatrol enemyPatrol;
+    private Animator animator;
 
     private void Awake()
     {
         //anim get component
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -62,6 +64,11 @@ public class MeleeEnemy : MonoBehaviour
         if (hit.collider != null)
         {
             Debug.Log("Player attacked");
+            animator.SetBool("isAttack", true);
+        }
+        else
+        {
+            animator.SetBool("isAttack", false);
         }
 
         return hit.collider != null;
