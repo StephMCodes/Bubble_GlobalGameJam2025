@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
+    [Header("Patrol Edges")]
     [SerializeField] private Transform _leftEdge;
     [SerializeField] private Transform _rightEdge;
+
+    [Header("Enemy Values and Idle")]
     [SerializeField] private Transform _enemy;
     [SerializeField] private float _speed;
     private bool _movingLeft;
@@ -73,6 +76,11 @@ public class EnemyPatrol : MonoBehaviour
         {
             _movingLeft = !_movingLeft; //swap moving direction false is right
         }
+    }
+
+    private void OnDisable()
+    {
+        //Animation.SetBool("move", false);
     }
 
 }

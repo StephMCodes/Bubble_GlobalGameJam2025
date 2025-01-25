@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
+    [Header("Attack Values")]
     [SerializeField] private float _attackCooldown;
     [SerializeField] private float _damage;
     [SerializeField] private float _range;
+
+    [Header("Attack Values")]
     [SerializeField] private float _colliderDistance;
     private float _cooldownTimer = Mathf.Infinity;
-
     [SerializeField] private BoxCollider2D _boxCollider;
+
+    [Header("Layer")]
     [SerializeField] private LayerMask _playerLayer;
 
     //player health
@@ -18,9 +22,12 @@ public class MeleeEnemy : MonoBehaviour
     //ANIM
     //private Animator anim;
 
+    private EnemyPatrol enemyPatrol;
+
     private void Awake()
     {
         //anim get component
+        enemyPatrol = GetComponentInParent<EnemyPatrol>();
     }
     private void Update()
     {
@@ -35,6 +42,14 @@ public class MeleeEnemy : MonoBehaviour
                 //anim.SetTrigger("NAME");
             }
         }
+
+        if (enemyPatrol != null)
+        {
+            //if player not in sight, keep patrolling
+            enemyPatrol.enabled = !SeesPlayer();
+        }
+
+
     }
 
     private bool SeesPlayer()
