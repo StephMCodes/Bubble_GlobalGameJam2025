@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34f71c91ab291b4bae60f6833fd00c0, type: 3}
   m_Name: small playermvt
   m_EditorClassIdentifier: 
-  MaxWalkSpeed: 1
-  GroundAcceleration: 1.7
-  GroundDeceleration: 6.8
-  AirAcceleration: 0.3
-  AirDeceleration: 6
-  MaxRunSpeed: 3
+  MaxWalkSpeed: 7.2
+  GroundAcceleration: 5
+  GroundDeceleration: 8.4
+  AirAcceleration: 3
+  AirDeceleration: 6.8
+  MaxRunSpeed: 14.1
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8

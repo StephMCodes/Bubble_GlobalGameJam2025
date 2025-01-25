@@ -130,7 +130,10 @@ public class MvtPlayer : MonoBehaviour
         {
             _jumpBufferTimer = MoveStats.JumpBufferTime;
             _jumpReleasedDuringBuffer = false;
-            _audioSource.PlayOneShot(jump);
+            if (_numOfJumpsUsed < 2)
+            {
+                _audioSource.PlayOneShot(jump);
+            }
 
         }
 
