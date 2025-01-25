@@ -61,7 +61,7 @@ public class MeleeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            //get health of player
+            Debug.Log("Player attacked");
         }
 
         return hit.collider != null;

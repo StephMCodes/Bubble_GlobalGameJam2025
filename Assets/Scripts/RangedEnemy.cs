@@ -21,6 +21,8 @@ public class RangedEnemy : MonoBehaviour
     [Header("Layer")]
     [SerializeField] private LayerMask _playerLayer;
 
+    ProjectileScript _projectileScript;
+
     //player health
 
     //ANIM
@@ -55,6 +57,14 @@ public class RangedEnemy : MonoBehaviour
 
     }
 
+    private void Attack()
+    {
+        //anim attack
+        _cooldownTimer = 0;
+
+        _missiles[0].transform.position = _firingPoint.transform.position;
+        _missiles[0].GetComponent<ProjectileScript>().SetDirection(Mathf.Sign(transform.localScale.x));
+    }
     private bool SeesPlayer()
     {
         //enemy _range of sight
@@ -69,18 +79,21 @@ public class RangedEnemy : MonoBehaviour
 
         return hit.collider != null;
     }
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
-    //}
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        RangedAttack();
+    }
     private void RangedAttack()
     {
         _cooldownTimer = 0;
         //shoot
         _missiles[FindMissile()].transform.position = _firingPoint.position;
-        // _missiles[FindMissile()].GetComponent<EnemyProjectile>().ActivateProjectile();
+        _missiles[FindMissile()].GetComponent<ProjectileScript>().ActivateProjectile();
     }
 
     private int FindMissile()
