@@ -23,6 +23,12 @@ public class MvtPlayer : MonoBehaviour
     //call heart class
     public HeartHealthSystem TheHealthSystemBackend;
 
+    //call audio source
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip pop;
+    [SerializeField] private AudioClip reversePop;
+
 
     //mvt vars
     private Vector2 _moveVelocity;
@@ -60,6 +66,7 @@ public class MvtPlayer : MonoBehaviour
         //init.bool and get component rb
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         _isFacingRight = true;
         _animator.SetBool("isWalking", true);
 
@@ -90,6 +97,7 @@ public class MvtPlayer : MonoBehaviour
         //HeartHealthVisual.heartHealthSysytemStatic.HealMe(healAmount); 
 
         _HeartHealthVisual.test(healAmount);
+        _audioSource.PlayOneShot(reversePop);
     }
 
     public void DamageKnockBack(Vector3 knockbackDir, float knockbackDistance, int damageAmount)
@@ -122,6 +130,8 @@ public class MvtPlayer : MonoBehaviour
         {
             _jumpBufferTimer = MoveStats.JumpBufferTime;
             _jumpReleasedDuringBuffer = false;
+            _audioSource.PlayOneShot(jump);
+
         }
 
         //button released
