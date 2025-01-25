@@ -12,9 +12,15 @@ public class MvtPlayer : MonoBehaviour
     //the underscore is a naming convention for private values
     [SerializeField] private Collider2D _bodyColl;
     [SerializeField] private Collider2D _feetColl;
+    //[SerializeField] public HeartHealthSystem _heartHealthSys;
+    [SerializeField] public HeartHealthVisual _HeartHealthVisual;
 
     //to access the rigidbody and assign it our physics
     private Rigidbody2D _rb;
+
+    //call heart class
+    public HeartHealthSystem TheHealthSystemBackend;
+
 
     //mvt vars
     private Vector2 _moveVelocity;
@@ -65,9 +71,19 @@ public class MvtPlayer : MonoBehaviour
     //heal method to access through Healing script
     public void Heal(int healAmount)
     {
+        //Debug.Log(HeartHealthVisual.heartHealthSysytemStatic);
         //references health system 
-        HeartHealthVisual.heartHealthSysytemStatic.Heal(healAmount); 
+        //HeartHealthVisual.heartHealthSysytemStatic.HealMe(healAmount); 
+
+        _HeartHealthVisual.test(healAmount);
     }
+
+    public void DamageKnockBack(Vector3 knockbackDir, float knockbackDistance, int damageAmount)
+    {
+        transform.position += knockbackDir * knockbackDistance;
+        HeartHealthVisual.heartHealthSysytemStatic.Damage(damageAmount);
+    }
+
     private void FixedUpdate() //fixed allows for more consistency
     {
         CollisionChecks();

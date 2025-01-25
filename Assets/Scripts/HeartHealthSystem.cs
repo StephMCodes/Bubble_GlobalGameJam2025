@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeartHealthSystem : MonoBehaviour
+public class HeartHealthSystem 
 {
     public const int MAX_FRAGMENT_AMOUNT = 3;
     public event EventHandler OnDamaged;
     public event EventHandler OnHealed;
     public event EventHandler OnDead;
+
+    
 
 
 
@@ -61,7 +63,7 @@ public class HeartHealthSystem : MonoBehaviour
         }
     }
 
-    public void Heal(int healAmount)
+    public void HealMe(int healAmount)
     {
         for (int i = 0; i < heartList.Count; i++)
         {
@@ -70,11 +72,11 @@ public class HeartHealthSystem : MonoBehaviour
             if (healAmount > missingFragments)
             {
                 healAmount -= missingFragments;
-                heart.Heal(missingFragments);
+                heart.HealMyAss(missingFragments);
             }
             else
             {
-                heart.Heal(healAmount);
+                heart.HealMyAss(healAmount);
                 break;
             }
         }
@@ -98,6 +100,7 @@ public class HeartHealthSystem : MonoBehaviour
 
         public int GetFragmentAmount()
         {
+            Debug.Log(fragments);
             return fragments;
         }
 
@@ -119,11 +122,14 @@ public class HeartHealthSystem : MonoBehaviour
             }
         }
 
-        public void Heal(int healAmount)
+        public void HealMyAss(int healAmount)
         {
+            Debug.Log("cunt");
+
             if (fragments + healAmount >= MAX_FRAGMENT_AMOUNT)
             {
                 fragments = MAX_FRAGMENT_AMOUNT;
+                //_HeartHealthVisual.test();
             }
             else
             {

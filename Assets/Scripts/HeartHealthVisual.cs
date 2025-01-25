@@ -72,7 +72,20 @@ public class HeartHealthVisual : MonoBehaviour
 
     }
 
-    private void RefreshAllHearts()
+    public void test(int healAMT)
+    {
+        Debug.Log("i work");
+        List<HeartHealthSystem.Heart> heartList = heartHealthSystem.GetHeartList();
+        for (int i = 0; i < heartImageList.Count; i++)
+        {
+            HeartImage heartImage = heartImageList[i];
+            HeartHealthSystem.Heart heart = heartList[i];
+
+           
+        }
+    }
+
+    public void RefreshAllHearts()
     {
         List<HeartHealthSystem.Heart> heartList = heartHealthSystem.GetHeartList();
         for (int i = 0; i < heartImageList.Count; i++)
@@ -188,7 +201,7 @@ public class HeartHealthVisual : MonoBehaviour
                 //    break;
 
 
-                case 1:
+                case 4:
 
                     heartImage.sprite = heartHealthVisual.heart4Sprite;
 
