@@ -858,7 +858,8 @@ MonoBehaviour:
   _leftEdge: {fileID: 1151731575}
   _rightEdge: {fileID: 675616296}
   _enemy: {fileID: 1184651703}
-  _speed: 0
+  _speed: 2
+  _idleDuration: 2
 --- !u!4 &1963950280
 Transform:
   m_ObjectHideFlags: 0
