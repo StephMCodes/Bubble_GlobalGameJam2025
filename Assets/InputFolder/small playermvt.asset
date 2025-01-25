@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34f71c91ab291b4bae60f6833fd00c0, type: 3}
+  m_Name: small playermvt
+  m_EditorClassIdentifier: 
+  MaxWalkSpeed: 1
+  GroundAcceleration: 1.7
+  GroundDeceleration: 6.8
+  AirAcceleration: 0.3
+  AirDeceleration: 6
+  MaxRunSpeed: 3
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  GroundDetectionRaycastLength: 0.02
+  HeadDetectionRaycastLength: 0.02
+  HeadWidth: 0.75
+  JumpHeight: 2.21
+  JumpHeightCompensationFactor: 1
+  TimeUntilJumpApex: 0.35
+  GravityOnReleaseMultiplier: 2
+  MaxFallSpeed: 2
+  NumJumpsAllowed: 2
+  TimeForUpwardsCancel: 0.027
+  ApexThreshold: 0.97
+  ApexHangTime: 0.075
+  JumpBufferTime: 0.125
+  JumpCoyoteTime: 0.1
