@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeEnemy : MonoBehaviour
+public class RangedEnemy : MonoBehaviour
 {
     [Header("Attack Values")]
     [SerializeField] private float _attackCooldown;
     [SerializeField] private float _damage;
     [SerializeField] private float _range;
+
+    [Header("Ranged Values")]
+    [SerializeField] private Transform _firingPoint;
+    [SerializeField] private GameObject[] _missiles;
 
     [Header("Attack Values")]
     [SerializeField] private float _colliderDistance;
@@ -23,7 +27,6 @@ public class MeleeEnemy : MonoBehaviour
     //private Animator anim;
 
     private EnemyPatrol enemyPatrol;
-
     private void Awake()
     {
         //anim get component
@@ -37,8 +40,8 @@ public class MeleeEnemy : MonoBehaviour
         {
             if (_cooldownTimer >= _attackCooldown)
             {
-               //reset cooldown
-               _cooldownTimer = 0;
+                //reset cooldown
+                _cooldownTimer = 0;
                 //anim.SetTrigger("NAME");
             }
         }
@@ -59,33 +62,38 @@ public class MeleeEnemy : MonoBehaviour
         new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z),
         0, Vector2.left, 0, _playerLayer);
 
-        if (hit.collider != null)
-        {
-            //get health of player
-        }
+        // if (hit.collider != null)
+        // {
+        //get health of player
+        // z}
 
         return hit.collider != null;
     }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
+    //}
 
-    private void DamagePlayer()
+    private void RangedAttack()
     {
-        if (SeesPlayer())
+        _cooldownTimer = 0;
+        //shoot
+        _missiles[FindMissile()].transform.position = _firingPoint.position;
+        // _missiles[FindMissile()].GetComponent<EnemyProjectile>().ActivateProjectile();
+    }
+
+    private int FindMissile()
+    {
+        for (int i = 0; i < _missiles.Length; i++)
         {
-            //damage player
-            //take damage
-            Debug.Log("Player attacked");
+            if (!_missiles[i].activeInHierarchy)
+            {
+                return i;
+            }
         }
+        return 0;
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-    }
 
 }
