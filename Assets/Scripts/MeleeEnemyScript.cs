@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
@@ -16,6 +17,12 @@ public class MeleeEnemy : MonoBehaviour
 
     [Header("Layer")]
     [SerializeField] private LayerMask _playerLayer;
+
+    [Header("Enemy Type (F: obstacle, T: NPC")]
+    [SerializeField] private bool _type;
+
+    [Header("Player")]
+    [SerializeField] private GameObject _player;
 
     //player health
 
@@ -41,7 +48,7 @@ public class MeleeEnemy : MonoBehaviour
             {
                //reset cooldown
                _cooldownTimer = 0;
-                //anim.SetTrigger("NAME");
+                _player.GetComponent<Animator>().SetBool("isPopping", true);
             }
         }
 
@@ -63,12 +70,22 @@ public class MeleeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Debug.Log("Player attacked");
-            animator.SetBool("isAttack", true);
+            
+            if (_type)
+            {
+                Debug.Log("Player attacked");
+                _player.GetComponent<Animator>().SetBool("isPopping", true);
+                animator.SetBool("isAttack", true);
+                Invoke("ReturnBubble", 5.0f);
+
+            }
         }
         else
         {
-            animator.SetBool("isAttack", false);
+            if (_type)
+            {
+                animator.SetBool("isAttack", false);
+            }
         }
 
         return hit.collider != null;
@@ -84,15 +101,24 @@ public class MeleeEnemy : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Player hurt");
+        _player.GetComponent<Animator>().SetBool("isPopping", true);
+        Invoke("ReturnBubble", 5.0f);
+    }
+
+    private void ReturnBubble()
+    {
+        _player.GetComponent<Animator>().SetBool("isPopping", false);
 
     }
+
 
 }
