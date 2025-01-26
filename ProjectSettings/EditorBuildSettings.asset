@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter2-StoryTelling.unity
     guid: 03b9fbcf7ce6b414aaef3bc5257d082d
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2.unity
+    guid: b7c8f9ae033b0a7449b576886ef5d9aa
+  - enabled: 1
+    path: Assets/Chapter3 StoryTelling.unity
+    guid: 81c45cc946e175f4c840995bcd66d68e
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3.unity
+    guid: ff42f18cb725ad74887a47fbecc35f2c
   m_configObjects: {}
