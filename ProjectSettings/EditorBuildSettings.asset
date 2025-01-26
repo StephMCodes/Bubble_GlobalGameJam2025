@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fffea4d3d08f2ae4ebc9b0c08c357300
   - enabled: 1
+    path: Assets/Scenes/Chapter1-StoryTelling.unity
+    guid: daebf62098a58f54b99ab43b71c7ef3e
+  - enabled: 1
     path: Assets/Scenes/Chapter 1.unity
-    guid: a114b982f7effcc49b8a7f840403dd2e
+    guid: 004606a46b400b64fb0a5d15a324ecc9
   m_configObjects: {}
