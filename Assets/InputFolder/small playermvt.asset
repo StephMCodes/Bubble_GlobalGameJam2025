@@ -15,7 +15,7 @@ MonoBehaviour:
   MaxWalkSpeed: 8
   GroundAcceleration: 6
   GroundDeceleration: 9.1
-  AirAcceleration: 5
+  AirAcceleration: 3
   AirDeceleration: 4.7
   MaxRunSpeed: 10
   GroundLayer:
@@ -24,7 +24,7 @@ MonoBehaviour:
   GroundDetectionRaycastLength: 0.02
   HeadDetectionRaycastLength: 0.02
   HeadWidth: 0.75
-  JumpHeight: 3
+  JumpHeight: 3.5
   JumpHeightCompensationFactor: 1.054
   TimeUntilJumpApex: 0.35
   GravityOnReleaseMultiplier: 2
