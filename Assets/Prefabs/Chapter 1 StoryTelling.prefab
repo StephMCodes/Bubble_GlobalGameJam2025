@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 109136872396592335}
   m_Layer: 0
-  m_Name: 'Chapter 1 StoryTelling '
+  m_Name: Chapter 1 StoryTelling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
