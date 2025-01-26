@@ -20,6 +20,7 @@ public class MeleeEnemy : MonoBehaviour
 
     [Header("Enemy Type (F: obstacle, T: NPC")]
     [SerializeField] private bool _type;
+    private bool popped;
 
     [Header("Player")]
     [SerializeField] private GameObject _player;
@@ -49,6 +50,7 @@ public class MeleeEnemy : MonoBehaviour
                //reset cooldown
                _cooldownTimer = 0;
                 _player.GetComponent<Animator>().SetBool("isPopping", true);
+                popped = true;
             }
         }
 
@@ -71,7 +73,7 @@ public class MeleeEnemy : MonoBehaviour
         if (hit.collider != null)
         {
             
-            if (_type)
+            if (_type && !popped)
             {
                 Debug.Log("Player attacked");
                 _player.GetComponent<Animator>().SetBool("isPopping", true);
@@ -109,14 +111,19 @@ public class MeleeEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Player hurt");
-        _player.GetComponent<Animator>().SetBool("isPopping", true);
-        Invoke("ReturnBubble", 5.0f);
+        if (!_type && !popped)
+        {
+            Debug.Log("Player hurt");
+            popped = true;
+            _player.GetComponent<Animator>().SetBool("isPopping", true);
+            Invoke("ReturnBubble", 5.0f);
+        }
     }
 
     private void ReturnBubble()
     {
         _player.GetComponent<Animator>().SetBool("isPopping", false);
+        popped = false;
 
     }
 
