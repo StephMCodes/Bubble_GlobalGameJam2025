@@ -389,7 +389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.19997, y: 2.800026}
+  m_AnchoredPosition: {x: -157.19997, y: 6.8}
   m_SizeDelta: {x: 272.09, y: 130.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89040047
@@ -813,7 +813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.5037384, y: 10.876949}
+  m_AnchoredPosition: {x: -5.699997, y: -0.0000076293945}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286571410
@@ -844,7 +844,7 @@ MonoBehaviour:
     Bella Perez - Programmer and Level design
 
     Sara
-    M. -  Enviornment Art and 2D Art'
+    M. -  Enviorment Art and 2D Art'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6be42693dba977940818066e72dc4279, type: 2}
   m_sharedMaterial: {fileID: 3250970367791450720, guid: 6be42693dba977940818066e72dc4279, type: 2}
@@ -871,8 +871,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.8
-  m_fontSizeBase: 20.8
+  m_fontSize: 18.6
+  m_fontSizeBase: 18.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2224,13 +2224,12 @@ RectTransform:
   - {fileID: 1294049308}
   - {fileID: 750069042}
   - {fileID: 1083999109}
-  - {fileID: 1209342593}
   - {fileID: 89040046}
   m_Father: {fileID: 2044585187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 9.786621}
+  m_AnchoredPosition: {x: 0, y: 9.786621}
   m_SizeDelta: {x: 0.00012207, y: 19.5731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084119764
@@ -2481,119 +2480,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117517534}
-  m_CullTransparentMesh: 1
---- !u!1 &1209342592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1209342593}
-  - component: {fileID: 1209342595}
-  - component: {fileID: 1209342594}
-  m_Layer: 5
-  m_Name: 'asset creds  Button '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1209342593
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209342592}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2475, y: 1.2475, z: 1.2475}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1084119763}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.571, y: -107}
-  m_SizeDelta: {x: 127.57, y: 31.022}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1209342594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209342592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.34763253, g: 0.35614386, b: 0.5849056, a: 1}
-    m_PressedColor: {r: 0.34763253, g: 0.35614386, b: 0.5849056, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 779136505}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1084119762}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!222 &1209342595
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209342592}
   m_CullTransparentMesh: 1
 --- !u!1 &1294049307
 GameObject:
@@ -3054,8 +2940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 353.9794, y: -18.428}
-  m_SizeDelta: {x: -109.1077, y: 62.943}
+  m_AnchoredPosition: {x: 356.69, y: 30.5}
+  m_SizeDelta: {x: -103.4958, y: -3.3641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454433514
 MonoBehaviour:
@@ -3077,7 +2963,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Assser hfuhfuhuf
+  m_text: 'Song: Flowing Into The Darkness
+
+    Composer: Nyoko
+
+    Website: https://soundcloud.com/redowthered
+
+    License:
+    Free To Use YouTube license youtube-free
+
+    Music powered by BreakingCopyright:
+    https://breakingcopyright.com
+
+    
+
+    https://opengameart.org/content/bubble-pop
+    sound effect credit
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6be42693dba977940818066e72dc4279, type: 2}
   m_sharedMaterial: {fileID: 3250970367791450720, guid: 6be42693dba977940818066e72dc4279, type: 2}
@@ -3104,14 +3007,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.8
-  m_fontSizeBase: 20.8
+  m_fontSize: 9.9
+  m_fontSizeBase: 9.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 3
@@ -3369,7 +3272,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.34763253, g: 0.35614386, b: 0.5849056, a: 1}
+    m_HighlightedColor: {r: 0.19215688, g: 0.098039225, b: 0.33333334, a: 1}
     m_PressedColor: {r: 0.34763253, g: 0.35614386, b: 0.5849056, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

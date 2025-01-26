@@ -11,6 +11,9 @@ public class Healing : MonoBehaviour
         // Check if the collider belongs to the Player
         if (other.CompareTag("Player"))
         {
+            
+            MvtPlayer.GettingHit(false, true);
+
             // Get the PlayerController component
             MvtPlayer playerController = other.GetComponent<MvtPlayer>();
 
@@ -20,7 +23,7 @@ public class Healing : MonoBehaviour
             if(MvtPlayer != null)
             {
                 MvtPlayer.Heal(healAmount);
-                Debug.Log(healAmount);
+                //Debug.Log(healAmount);
                 Destroy(gameObject);
             }
 

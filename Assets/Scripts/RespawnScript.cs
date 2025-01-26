@@ -31,4 +31,9 @@ public class RespawnScript : MonoBehaviour
             player.transform.position = checkpoint.transform.position;
         }
     }
+
+    public void Respawn()
+    {
+        player.transform.position = checkpoint.transform.position;
+    }
 }

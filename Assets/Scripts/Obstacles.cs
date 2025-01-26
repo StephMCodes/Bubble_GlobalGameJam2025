@@ -21,6 +21,8 @@ public class Obstacles : MonoBehaviour
             //MvtPlayer playerController = other.GetComponent<MvtPlayer>();
             //Debug.Log(MvtPlayer);
 
+            //MvtPlayer.GettingHit(true, false);
+
 
             if (MvtPlayer != null) // Ensure playerController is not null
             {

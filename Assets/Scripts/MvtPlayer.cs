@@ -61,6 +61,8 @@ public class MvtPlayer : MonoBehaviour
     //coyote time vars
     private float _coyoteTimer;
 
+    [SerializeField] GameObject _respawn;
+
     private void Awake()
     {
         //init.bool and get component rb
@@ -86,7 +88,12 @@ public class MvtPlayer : MonoBehaviour
             _animator.SetBool("isJump", false);
         }
         //Debug.Log(_isPastApexThreshold);
-        Debug.Log(_isJumping);
+        //Debug.Log(_isJumping);
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            //Respawn();
+        }
     }
 
     //heal method to access through Healing script
@@ -96,14 +103,36 @@ public class MvtPlayer : MonoBehaviour
         //references health system 
         //HeartHealthVisual.heartHealthSysytemStatic.HealMe(healAmount); 
 
-        _HeartHealthVisual.test(healAmount);
+        _HeartHealthVisual.dmgTest(healAmount);
         _audioSource.PlayOneShot(reversePop);
     }
 
     public void DamageKnockBack(Vector3 knockbackDir, float knockbackDistance, int damageAmount)
     {
+        //_HeartHealthVisual.dmgTest(1);
         transform.position += knockbackDir * knockbackDistance;
-        HeartHealthVisual.heartHealthSysytemStatic.Damage(damageAmount);
+        //HeartHealthVisual.heartHealthSysytemStatic.Damage(damageAmount);
+        _animator.SetBool("isAttack", true);
+        Invoke("Attacking", 10f);
+
+    }
+
+    public void Attacking()
+    {
+        _animator.SetBool("isAttack", false);
+    }
+
+    public void GettingHit(bool ouch, bool heal)
+    {
+        if (ouch == true)
+        {
+            _HeartHealthVisual.dmgTest(1);
+            ouch = false;
+        } else if (heal == true)
+        {
+            _HeartHealthVisual.healTest(1);
+            heal = false;
+        }
     }
 
     private void FixedUpdate() //fixed allows for more consistency

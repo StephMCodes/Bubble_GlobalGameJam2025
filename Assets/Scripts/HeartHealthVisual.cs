@@ -17,6 +17,11 @@ public class HeartHealthVisual : MonoBehaviour
     [SerializeField] private Sprite heart4Sprite;
     [SerializeField] private AnimationClip heartFullAnimationClip;
 
+    [Header ("Bubble tests :(")]
+    [SerializeField] public SpriteRenderer _bubbleCanvas;
+    [SerializeField] public Sprite _bubbleBroken;
+    [SerializeField] public Sprite _bubbleFull;
+
     private List<HeartImage> heartImageList;
     private HeartHealthSystem heartHealthSystem;
     private bool isHealing;
@@ -72,17 +77,19 @@ public class HeartHealthVisual : MonoBehaviour
 
     }
 
-    public void test(int healAMT)
+    public void dmgTest(int dmgAMT)
     {
-        Debug.Log("i work");
-        List<HeartHealthSystem.Heart> heartList = heartHealthSystem.GetHeartList();
-        for (int i = 0; i < heartImageList.Count; i++)
-        {
-            HeartImage heartImage = heartImageList[i];
-            HeartHealthSystem.Heart heart = heartList[i];
+        Debug.Log("i hurt");
+        _bubbleCanvas.sprite = _bubbleBroken;
 
-           
-        }
+
+    }
+
+    public void healTest(int healAMT)
+    {
+        Debug.Log("i heal bitch");
+        _bubbleCanvas.sprite = _bubbleFull;
+        Debug.Log(_bubbleCanvas.sprite);
     }
 
     public void RefreshAllHearts()
