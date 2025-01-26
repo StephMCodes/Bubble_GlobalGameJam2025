@@ -1502,6 +1502,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hori Tiles bg1
       objectReference: {fileID: 0}
+    - target: {fileID: 5868845480985987892, guid: 41ca7b81e56f65a47a64fc5ba8e3152a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868845480985987892, guid: 41ca7b81e56f65a47a64fc5ba8e3152a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.78
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1745,11 +1753,72 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hori Tiles bg2
       objectReference: {fileID: 0}
+    - target: {fileID: 8741708779929388110, guid: ee55ea1387f3a7748b70fe72bc7f74e7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee55ea1387f3a7748b70fe72bc7f74e7, type: 3}
+--- !u!1001 &6160411062692731450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2817364106006615537, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_Name
+      value: dark evil grass google result (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517850374862995783, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d6622f1c846570428e4d2d5dfe6482e, type: 3}
 --- !u!1001 &8521139135231765115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1758,6 +1827,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 246059656}
     m_Modifications:
+    - target: {fileID: 1957020103784776187, guid: ea0daab48382118409bc9625ae8eb3ae, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 3253143299009753807, guid: ea0daab48382118409bc9625ae8eb3ae, type: 3}
       propertyPath: m_Name
       value: Decor stay
@@ -2025,3 +2098,4 @@ SceneRoots:
   - {fileID: 1583824534}
   - {fileID: 292988685}
   - {fileID: 1522230343}
+  - {fileID: 6160411062692731450}

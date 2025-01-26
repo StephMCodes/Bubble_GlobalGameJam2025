@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: bebcd4b102fd54248a7aef6fed87b4b2, type: 3}
-  m_Color: {r: 0.13920254, g: 0.5018867, b: 0.34970245, a: 1}
+  m_Color: {r: 0.21383637, g: 0.21383637, b: 0.21383637, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -174,3 +174,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _type: 0
+  _player: {fileID: 0}
