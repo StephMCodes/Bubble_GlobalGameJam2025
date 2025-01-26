@@ -8,6 +8,7 @@ public class RespawnScript : MonoBehaviour
     [Header("References")]
     public GameObject player;
     public GameObject checkpoint;
+    public AudioSource respawnClip;
     
     
     // Start is called before the first frame update
@@ -29,6 +30,7 @@ public class RespawnScript : MonoBehaviour
         {
            //respawn to current checkpoint
             player.transform.position = checkpoint.transform.position;
+            respawnClip.Play();
         }
     }
 
