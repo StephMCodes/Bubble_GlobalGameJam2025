@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4628956090195119923}
   - component: {fileID: 106017203070197132}
-  - component: {fileID: 818458538581468795}
+  - component: {fileID: 2800315101530395681}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_6
   m_TagString: Untagged
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &818458538581468795
-BoxCollider2D:
+--- !u!70 &2800315101530395681
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,19 +117,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014426231, y: 0.12981987}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.620001, y: 7.3700004}
-    newSize: {x: 8.620001, y: 7.3700004}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7.841078, y: 5.148637}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.0005893999, y: 0.053595122}
+  m_Size: {x: 8.406829, y: 5.010266}
+  m_Direction: 1
 --- !u!1 &2420686745823061723
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943947454319019787}
   - component: {fileID: 4370307263445302140}
-  - component: {fileID: 6716771315040927454}
+  - component: {fileID: 353137098985590151}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_4
   m_TagString: Untagged
@@ -157,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 2420686745823061723}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.963, y: 9.957854, z: 0}
+  m_LocalPosition: {x: 42.46, y: 10.8, z: 0}
   m_LocalScale: {x: 1.2833608, y: 1.2833608, z: 1.2833608}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -215,8 +205,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6716771315040927454
-BoxCollider2D:
+--- !u!70 &353137098985590151
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -247,19 +237,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.094359815, y: 0.11008608}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.4900002, y: 4.08}
-    newSize: {x: 3.4900002, y: 4.08}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.2947712, y: 2.60169}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.01880427, y: 0.20400997}
+  m_Size: {x: 2.8598118, y: 2.3186657}
+  m_Direction: 1
 --- !u!1 &2453022962898576343
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925954672799278764}
   - component: {fileID: 266982306614371780}
-  - component: {fileID: 738261784622704579}
+  - component: {fileID: 9149203500554503660}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_5
   m_TagString: Untagged
@@ -345,8 +325,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &738261784622704579
-BoxCollider2D:
+--- !u!70 &9149203500554503660
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -377,19 +357,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09895027, y: -0.19790173}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.26, y: 8.43}
-    newSize: {x: 7.26, y: 8.43}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.8181467, y: 8.034197}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.024978265, y: 0.1000269}
+  m_Size: {x: 5.611458, y: 7.930202}
+  m_Direction: 0
 --- !u!1 &2542980975464067812
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8754269513167828129}
   - component: {fileID: 576847399155029969}
-  - component: {fileID: 3322778472179587956}
+  - component: {fileID: 7576492337774238190}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_3 (2)
   m_TagString: Untagged
@@ -475,8 +445,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3322778472179587956
-BoxCollider2D:
+--- !u!70 &7576492337774238190
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -507,19 +477,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0760808, y: 0.18259585}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.53, y: 4.16}
-    newSize: {x: 8.53, y: 4.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7.3431206, y: 2.516631}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.21399972, y: -0.018625546}
+  m_Size: {x: 6.9111066, y: 1.8681321}
+  m_Direction: 1
 --- !u!1 &3240338148967279507
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4323837279639792725}
   - component: {fileID: 5481598981379423449}
-  - component: {fileID: 2318294507365272326}
+  - component: {fileID: 5788646008686878671}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_1
   m_TagString: Untagged
@@ -605,8 +565,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2318294507365272326
-BoxCollider2D:
+--- !u!70 &5788646008686878671
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -637,19 +597,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.036723018, y: 0.23290443}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.79, y: 12.54}
-    newSize: {x: 3.79, y: 12.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9141934, y: 8.926907}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.09492932, y: 0.025135182}
+  m_Size: {x: 2.4539385, y: 10.498717}
+  m_Direction: 0
 --- !u!1 &3361383377487192288
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2201204603383888054}
   - component: {fileID: 62135383922794198}
-  - component: {fileID: 1242852429942687274}
+  - component: {fileID: 8738305431598311588}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_6 (2)
   m_TagString: Untagged
@@ -735,8 +685,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1242852429942687274
-BoxCollider2D:
+--- !u!70 &8738305431598311588
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -767,19 +717,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16661882, y: -0.4497161}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.620001, y: 7.3700004}
-    newSize: {x: 8.620001, y: 7.3700004}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.286763, y: 6.4705687}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.047684513, y: -0.023855582}
+  m_Size: {x: 8.524635, y: 5.4251366}
+  m_Direction: 1
 --- !u!1 &3412351291310613807
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6946925164242382388}
   - component: {fileID: 1158658622172003728}
-  - component: {fileID: 7329352785535670026}
+  - component: {fileID: 272024936956123644}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_0
   m_TagString: Untagged
@@ -865,8 +805,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7329352785535670026
-BoxCollider2D:
+--- !u!70 &272024936956123644
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -897,19 +837,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15473676, y: -0.15845633}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.030001, y: 12.490001}
-    newSize: {x: 13.030001, y: 12.490001}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.382643, y: 9.142201}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.14819035, y: 0.44457194}
+  m_Size: {x: 11.278784, y: 10.092288}
+  m_Direction: 1
 --- !u!1 &5642532592185891485
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7797747110986455892}
   - component: {fileID: 7872654517679175933}
-  - component: {fileID: 5227281405812333888}
+  - component: {fileID: 4030147265055436757}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_9
   m_TagString: Untagged
@@ -1035,8 +965,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5227281405812333888
-BoxCollider2D:
+--- !u!70 &4030147265055436757
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1067,19 +997,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13143635, y: 0.48193455}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.55, y: 12.59}
-    newSize: {x: 12.55, y: 12.59}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 10.271769, y: 9.260279}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.017988605, y: 0.5254156}
+  m_Size: {x: 10.899274, y: 9.596793}
+  m_Direction: 1
 --- !u!1 &8988069737844172905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618297556651239970}
   - component: {fileID: 2448540067711525569}
-  - component: {fileID: 5098129435276285493}
+  - component: {fileID: 6202952635974190878}
   m_Layer: 3
   m_Name: gamejam-tileset-lvl1 (1)_6 (1)
   m_TagString: Untagged
@@ -1165,8 +1085,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5098129435276285493
-BoxCollider2D:
+--- !u!70 &6202952635974190878
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1197,16 +1117,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.27617967, y: -0.4082656}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.620001, y: 7.3700004}
-    newSize: {x: 8.620001, y: 7.3700004}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.067641, y: 6.5534697}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.09538538, y: -0.011927249}
+  m_Size: {x: 8.429288, y: 5.486473}
+  m_Direction: 1
