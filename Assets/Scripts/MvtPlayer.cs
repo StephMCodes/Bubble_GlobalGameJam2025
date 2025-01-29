@@ -13,7 +13,7 @@ public class MvtPlayer : MonoBehaviour
     [SerializeField] private Collider2D _bodyColl;
     [SerializeField] private Collider2D _feetColl;
     //[SerializeField] public HeartHealthSystem _heartHealthSys;
-    [SerializeField] public HeartHealthVisual _HeartHealthVisual;
+    //[SerializeField] public HeartHealthVisual _HeartHealthVisual;
 
     //to access the rigidbody and assign it our physics
     private Rigidbody2D _rb;
@@ -21,7 +21,7 @@ public class MvtPlayer : MonoBehaviour
     private Animator _animator;
 
     //call heart class
-    public HeartHealthSystem TheHealthSystemBackend;
+   // public HeartHealthSystem TheHealthSystemBackend;
 
     //call audio source
     private AudioSource _audioSource;
@@ -97,43 +97,40 @@ public class MvtPlayer : MonoBehaviour
     }
 
     //heal method to access through Healing script
-    public void Heal(int healAmount)
-    {
-        //Debug.Log(HeartHealthVisual.heartHealthSysytemStatic);
-        //references health system 
-        //HeartHealthVisual.heartHealthSysytemStatic.HealMe(healAmount); 
+    //public void Heal(int healAmount)
+    //{
+    //    //Debug.Log(HeartHealthVisual.heartHealthSysytemStatic);
+    //    //references health system 
+    //    //HeartHealthVisual.heartHealthSysytemStatic.HealMe(healAmount); 
 
-        _HeartHealthVisual.dmgTest(healAmount);
-        _audioSource.PlayOneShot(reversePop);
-    }
+    //    _HeartHealthVisual.dmgTest(healAmount);
+    //    _audioSource.PlayOneShot(reversePop);
+    //}
 
-    public void DamageKnockBack(Vector3 knockbackDir, float knockbackDistance, int damageAmount)
-    {
-        //_HeartHealthVisual.dmgTest(1);
-        transform.position += knockbackDir * knockbackDistance;
-        //HeartHealthVisual.heartHealthSysytemStatic.Damage(damageAmount);
-        _animator.SetBool("isAttack", true);
-        Invoke("Attacking", 10f);
+    //public void DamageKnockBack(Vector3 knockbackDir, float knockbackDistance, int damageAmount)
+    //{
+    //    //_HeartHealthVisual.dmgTest(1);
+    //    transform.position += knockbackDir * knockbackDistance;
+    //    //HeartHealthVisual.heartHealthSysytemStatic.Damage(damageAmount);
+    //    _animator.SetBool("isAttack", true);
+    //    Invoke("Attacking", 10f);
 
-    }
+    //}
 
-    public void Attacking()
-    {
-        _animator.SetBool("isAttack", false);
-    }
+   
 
-    public void GettingHit(bool ouch, bool heal)
-    {
-        if (ouch == true)
-        {
-            _HeartHealthVisual.dmgTest(1);
-            ouch = false;
-        } else if (heal == true)
-        {
-            _HeartHealthVisual.healTest(1);
-            heal = false;
-        }
-    }
+    //public void GettingHit(bool ouch, bool heal)
+    //{
+    //    if (ouch == true)
+    //    {
+    //        _HeartHealthVisual.dmgTest(1);
+    //        ouch = false;
+    //    } else if (heal == true)
+    //    {
+    //        _HeartHealthVisual.healTest(1);
+    //        heal = false;
+    //    }
+    //}
 
     private void FixedUpdate() //fixed allows for more consistency
     {
