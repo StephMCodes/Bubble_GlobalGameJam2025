@@ -15,6 +15,8 @@ public class HealthDisplay : MonoBehaviour
     // array of objects *tea*
     public Image[] hearts; 
 
+    public PlayerHealth playerHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,14 @@ public class HealthDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //makes sure that the health and maxHealth values match the PlayerHealth script
+        health = playerHealth.health;
+        maxHealth = playerHealth.maxHealth;
+
         //checks if each heart to see if it should be empty or full
         for (int i = 0; i < hearts.Length; i++) //integer equal to how many hearts put in list in Unity
         {
+            
             if (i < health)
             {
                 hearts[i].sprite = fullHeart;

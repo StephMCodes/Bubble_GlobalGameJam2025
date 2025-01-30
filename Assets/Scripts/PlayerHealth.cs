@@ -7,6 +7,11 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth = 10;
 
+    //public SpriteRenderer playerSr;
+    //public MvtPlayer playerMovement;
+    public CheckpointScript checkpoints;
+    public RespawnScript respawn;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +23,13 @@ public class PlayerHealth : MonoBehaviour
     //called whenever damage is taken
    public void TakeDamage(int amount) //amount damge player takes
     {
-        //if the damage brings player to zero or less the player willbe destroyed 
+        //if the damage brings player to zero or less the player movement disabled and sprite renderer disabled 
         health -= amount;
         if (health <= 0)
         {
-            Destroy(gameObject); 
+            //playerSr.enabled = false;
+            //playerMovement.enabled = false;
+           
         }
     }
 }
