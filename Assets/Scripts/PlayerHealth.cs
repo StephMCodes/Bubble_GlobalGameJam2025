@@ -27,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            //refernce the cooldp
             //reference the respawn/ updated spawn points
             //playerSr.enabled = false;
             //playerMovement.enabled = false;

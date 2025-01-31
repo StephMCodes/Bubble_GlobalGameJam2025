@@ -20,13 +20,15 @@ public class MeleeEnemy : MonoBehaviour
 
     [Header("Enemy Type (F: obstacle, T: NPC")]
     [SerializeField] private bool _type;
-    private bool popped;
+    public static bool popped = false;
 
     [Header("Player")]
     [SerializeField] private GameObject _player;
 
     //player health
-
+    //Lets EnenmyDamage script know where to find PlayerHealth script 
+    public PlayerHealth playerHealth;
+    public int damage = 1;
     //ANIM
     //private Animator anim;
 
@@ -41,25 +43,17 @@ public class MeleeEnemy : MonoBehaviour
     }
     private void Update()
     {
+        // Update cooldown timer
         _cooldownTimer += Time.deltaTime;
-        //when cool down is done enemy can attack again
-        if (SeesPlayer())
-        {
-            if (_cooldownTimer >= _attackCooldown)
-            {
-               //reset cooldown
-               _cooldownTimer = 0;
-                _player.GetComponent<Animator>().SetBool("isPopping", true);
-                popped = true;
-            }
-        }
+        
+        ////when cool down is done enemy can attack again
+        SeesPlayer();
 
         if (enemyPatrol != null)
         {
             //if player not in sight, keep patrolling
             enemyPatrol.enabled = !SeesPlayer();
         }
-
 
     }
 
@@ -72,14 +66,16 @@ public class MeleeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            
-            if (_type && !popped)
+            if (_type && _cooldownTimer >= _attackCooldown && !popped)
             {
-                Debug.Log("Player attacked");
+                popped = true;
+                Debug.Log(popped);
+                _cooldownTimer = 0; // Reset the cooldown timer
                 _player.GetComponent<Animator>().SetBool("isPopping", true);
                 animator.SetBool("isAttack", true);
-                Invoke("ReturnBubble", 5.0f);
-
+                playerHealth.TakeDamage(damage);
+                Invoke("ReturnBubble", 10.0f);
+                return true;
             }
         }
         else
@@ -93,15 +89,15 @@ public class MeleeEnemy : MonoBehaviour
         return hit.collider != null;
     }
 
-    private void DamagePlayer()
-    {
-        if (SeesPlayer())
-        {
+   // private void DamagePlayer()
+   // {
+     //   if (SeesPlayer())
+     //   {
             //damage player
             //take damage
-            Debug.Log("Player attacked");
-        }
-    }
+      //      Debug.Log("Player attacked");
+      //  }
+   // }
 
     //private void OnDrawGizmos()
     //{
@@ -109,22 +105,22 @@ public class MeleeEnemy : MonoBehaviour
     //    Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
     //}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!_type && !popped)
-        {
-            Debug.Log("Player hurt");
-            popped = true;
-            _player.GetComponent<Animator>().SetBool("isPopping", true);
-            Invoke("ReturnBubble", 5.0f);
-        }
-    }
+  //  private void OnCollisionEnter2D(Collision2D collision)
+   // {
+     //   if (!_type && !popped)
+      //  {
+            //Debug.Log("Player hurt");
+            //popped = true;
+            //_player.GetComponent<Animator>().SetBool("isPopping", true);
+            //Invoke("ReturnBubble", 5.0f);
+       // }
+   // }
 
     private void ReturnBubble()
     {
         _player.GetComponent<Animator>().SetBool("isPopping", false);
         popped = false;
-
+        Debug.Log(popped);
     }
 
 
