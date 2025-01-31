@@ -102,8 +102,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1730
-        width: 1303
-        height: 1249
+        width: 1293
+        height: 1248
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,7 +357,7 @@ TextureImporter:
         width: 410
         height: 397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
         width: 424
         height: 444
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
         width: 413
         height: 410
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 1251
         height: 1271
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -428,6 +428,27 @@ TextureImporter:
       bones: []
       spriteID: bc32c92f3b69f2d4e87218bf9d0fbc2d
       internalID: 1536161795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl1 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2611
+        width: 1231
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c106871b82a824f8857006bb9d5178
+      internalID: 501286524
       vertices: []
       indices: 
       edges: []
@@ -451,6 +472,7 @@ TextureImporter:
       gamejam-tileset-lvl1 (1)_13: -1615357958
       gamejam-tileset-lvl1 (1)_14: -678041355
       gamejam-tileset-lvl1 (1)_15: 1536161795
+      gamejam-tileset-lvl1 (1)_16: 501286524
       gamejam-tileset-lvl1 (1)_2: -2082401945
       gamejam-tileset-lvl1 (1)_3: 29540559
       gamejam-tileset-lvl1 (1)_4: -254487479
