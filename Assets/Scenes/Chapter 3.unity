@@ -476,7 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!1001 &148091593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148091595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!61 &183474275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419631175}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -1532,7 +1532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!1001 &442242148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2135,7 +2135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467607004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!61 &518523211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3810,7 +3810,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109886796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -3886,7 +3886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!1 &1127368639 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2964068686716103228, guid: d356d937d392aeb4d837177917fc5ebf, type: 3}
@@ -4030,7 +4030,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162265221}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -4106,7 +4106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!1 &1233802726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4508,7 +4508,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394654943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -4584,7 +4584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!61 &1409822712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4753,7 +4753,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440852052}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -4829,7 +4829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!1001 &1448801197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5525,7 +5525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475814025}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fe066ae4d34b14fa6662a69ea35e30, type: 3}
   m_Name: 
@@ -5601,7 +5601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2009632629}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 1255303207}
 --- !u!1001 &1517732031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8115,11 +8115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5943753037977922906, guid: 1c48048e44d26cb4f9cc78bfd6bbf45a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.78
+      value: -14.6
       objectReference: {fileID: 0}
     - target: {fileID: 5943753037977922906, guid: 1c48048e44d26cb4f9cc78bfd6bbf45a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.39
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5943753037977922906, guid: 1c48048e44d26cb4f9cc78bfd6bbf45a, type: 3}
       propertyPath: m_LocalPosition.z
