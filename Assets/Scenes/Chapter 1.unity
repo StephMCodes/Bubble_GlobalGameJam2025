@@ -3699,6 +3699,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3731,7 +3735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1 &1054538931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,6 +3946,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3974,7 +3982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1 &1118530019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7010968817526234343, guid: 0a2fc60774799234cb1d25a1194460da, type: 3}
@@ -4109,6 +4117,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4141,7 +4153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1 &1188852743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,6 +4368,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4388,7 +4404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1 &1232388471
 GameObject:
   m_ObjectHideFlags: 0
@@ -5121,6 +5137,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5153,7 +5173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1 &1481922819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,6 +6490,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6502,7 +6526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1001 &1821723045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6757,6 +6781,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6789,7 +6817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1 &1876083101
 GameObject:
   m_ObjectHideFlags: 0
@@ -7259,7 +7287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1001 &2059017764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7340,6 +7368,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7372,7 +7404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1001 &2067136566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7664,6 +7696,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7696,7 +7732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1892323943}
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 500861206}
 --- !u!1 &2106516699
 GameObject:
   m_ObjectHideFlags: 0
@@ -8952,6 +8988,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 500861206}
+    - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
