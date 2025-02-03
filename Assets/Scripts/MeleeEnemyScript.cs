@@ -12,7 +12,7 @@ public class MeleeEnemy : MonoBehaviour
 
     [Header("Attack Values")]
     [SerializeField] private float _colliderDistance;
-    private float _cooldownTimer = Mathf.Infinity;
+    //private float _cooldownTimer = Mathf.Infinity;
     [SerializeField] private BoxCollider2D _boxCollider;
 
     [Header("Layer")]
@@ -44,9 +44,11 @@ public class MeleeEnemy : MonoBehaviour
     private void Update()
     {
         // Update cooldown timer
-        _cooldownTimer += Time.deltaTime;
-        
+        //_cooldownTimer += Time.deltaTime;
+        Debug.Log(popped);
+
         ////when cool down is done enemy can attack again
+        //check for player and attack if so
         SeesPlayer();
 
         if (enemyPatrol != null)
@@ -66,17 +68,19 @@ public class MeleeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (_type && _cooldownTimer >= _attackCooldown && !popped)
+            if (_type && !popped)
             {
                 popped = true;
                 Debug.Log(popped);
-                _cooldownTimer = 0; // Reset the cooldown timer
+               // _cooldownTimer = 0; // Reset the cooldown timer
                 _player.GetComponent<Animator>().SetBool("isPopping", true);
                 animator.SetBool("isAttack", true);
                 playerHealth.TakeDamage(damage);
-                Invoke("ReturnBubble", 10.0f);
+                Invoke("ReturnBubble", 2.0f);
                 return true;
             }
+
+
         }
         else
         {
