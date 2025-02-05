@@ -100,13 +100,13 @@ TextureImporter:
       name: gamejam-tileset-lvl3 (1)_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1728
-        width: 1326
-        height: 1267
+        x: 0
+        y: 1729
+        width: 1280
+        height: 1261
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 27, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -121,12 +121,12 @@ TextureImporter:
       name: gamejam-tileset-lvl3 (1)_1
       rect:
         serializedVersion: 2
-        x: 1340
-        y: 1737
-        width: 339
-        height: 1263
+        x: 1313
+        y: 1729
+        width: 387
+        height: 1269
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: gamejam-tileset-lvl3 (1)_2
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 1274
-        width: 1296
-        height: 1726
+        x: 14
+        y: 1716
+        width: 1266
+        height: 329
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
         width: 853
         height: 416
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +189,7 @@ TextureImporter:
         width: 349
         height: 408
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +210,7 @@ TextureImporter:
         width: 726
         height: 843
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +231,7 @@ TextureImporter:
         width: 862
         height: 737
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +252,7 @@ TextureImporter:
         width: 5
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +273,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -289,12 +289,12 @@ TextureImporter:
       name: gamejam-tileset-lvl3 (1)_9
       rect:
         serializedVersion: 2
-        x: 1749
+        x: 1747
         y: 9
         width: 1251
         height: 1252
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +315,7 @@ TextureImporter:
         width: 1729
         height: 439
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +336,7 @@ TextureImporter:
         width: 4
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,6 +344,174 @@ TextureImporter:
       bones: []
       spriteID: 5922349e707850a4d9c2cd48238af4ea
       internalID: 1036418837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 487
+        width: 871
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084ca6cc4e5abb744bb764822988fc66
+      internalID: -1950498382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1027
+        width: 852
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235e25969553b974e921577af742dfd7
+      internalID: -37433750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2697
+        width: 1272
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c16be1b667946419aa84347dd928b1
+      internalID: -515340325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 18
+        width: 423
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae09239942464044abb20596b1ae1797
+      internalID: 1656924991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 2
+        width: 416
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb832359c456c6243b3d570de0f8b0fa
+      internalID: 360918606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 880
+        width: 406
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5c56cc8f0ddd2408ed2e3f9531d75f
+      internalID: -1919492451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 891
+        width: 412
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5f8a9c8700f9942b2dcfc3ecb30185
+      internalID: 1847950569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam-tileset-lvl3 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1274
+        width: 1296
+        height: 1726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5ec617b6f24db4c97e62497a5f0dd1
+      internalID: -335686872
       vertices: []
       indices: 
       edges: []
@@ -363,6 +531,14 @@ TextureImporter:
       gamejam-tileset-lvl3 (1)_1: 1050874303
       gamejam-tileset-lvl3 (1)_10: 1960415121
       gamejam-tileset-lvl3 (1)_11: 1036418837
+      gamejam-tileset-lvl3 (1)_12: -1950498382
+      gamejam-tileset-lvl3 (1)_13: -37433750
+      gamejam-tileset-lvl3 (1)_14: -515340325
+      gamejam-tileset-lvl3 (1)_15: 1656924991
+      gamejam-tileset-lvl3 (1)_16: 360918606
+      gamejam-tileset-lvl3 (1)_17: -1919492451
+      gamejam-tileset-lvl3 (1)_18: 1847950569
+      gamejam-tileset-lvl3 (1)_19: -335686872
       gamejam-tileset-lvl3 (1)_2: 1701835237
       gamejam-tileset-lvl3 (1)_3: -811355457
       gamejam-tileset-lvl3 (1)_4: 894162278
