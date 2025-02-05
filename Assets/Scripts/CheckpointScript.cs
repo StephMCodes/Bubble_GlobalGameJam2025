@@ -33,6 +33,7 @@ public class CheckpointScript : MonoBehaviour
         {
             respawn.checkpoint = this.gameObject;
             colliderCheckpoint.enabled = false; //so you cant activate it again by going backwards
+            Debug.Log(respawn.checkpoint);
         }
     }
 }
