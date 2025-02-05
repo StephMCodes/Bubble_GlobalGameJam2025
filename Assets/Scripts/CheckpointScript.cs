@@ -28,6 +28,7 @@ public class CheckpointScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Checkpoint got: " + this.gameObject);
         if (other.gameObject.CompareTag("Player"))
         {
             respawn.checkpoint = this.gameObject;

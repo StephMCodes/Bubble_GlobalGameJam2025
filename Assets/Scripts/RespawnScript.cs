@@ -28,14 +28,14 @@ public class RespawnScript : MonoBehaviour
        //instant death collider
         if (other.gameObject.CompareTag("Player"))
         {
-           //respawn to current checkpoint
-            player.transform.position = checkpoint.transform.position;
-            respawnClip.Play();
+            //respawn to current checkpoint
+            Respawn();
         }
     }
 
     public void Respawn()
     {
         player.transform.position = checkpoint.transform.position;
+        respawnClip.Play();
     }
 }

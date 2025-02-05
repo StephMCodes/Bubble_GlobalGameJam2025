@@ -45,7 +45,7 @@ public class MeleeEnemy : MonoBehaviour
     {
         // Update cooldown timer
         //_cooldownTimer += Time.deltaTime;
-        Debug.Log(popped);
+        //Debug.Log(popped);
 
         ////when cool down is done enemy can attack again
         //check for player and attack if so
@@ -71,7 +71,7 @@ public class MeleeEnemy : MonoBehaviour
             if (_type && !popped)
             {
                 popped = true;
-                Debug.Log(popped);
+                //Debug.Log(popped);
                // _cooldownTimer = 0; // Reset the cooldown timer
                 _player.GetComponent<Animator>().SetBool("isPopping", true);
                 animator.SetBool("isAttack", true);
@@ -124,7 +124,7 @@ public class MeleeEnemy : MonoBehaviour
     {
         _player.GetComponent<Animator>().SetBool("isPopping", false);
         popped = false;
-        Debug.Log(popped);
+        //Debug.Log(popped);
     }
 
 
