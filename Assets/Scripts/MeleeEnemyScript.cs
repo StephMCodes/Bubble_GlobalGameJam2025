@@ -43,12 +43,7 @@ public class MeleeEnemy : MonoBehaviour
     }
     private void Update()
     {
-        // Update cooldown timer
-        //_cooldownTimer += Time.deltaTime;
-        //Debug.Log(popped);
-
-        ////when cool down is done enemy can attack again
-        //check for player and attack if so
+        //check if the ghost came in contact with the player in dangerzone
         SeesPlayer();
 
         if (enemyPatrol != null)
@@ -71,16 +66,16 @@ public class MeleeEnemy : MonoBehaviour
             if (_type && !popped)
             {
                 popped = true;
-                //Debug.Log(popped);
-               // _cooldownTimer = 0; // Reset the cooldown timer
-                _player.GetComponent<Animator>().SetBool("isPopping", true);
+                //play ghost attack anim
                 animator.SetBool("isAttack", true);
+                //play pop anim
+                _player.GetComponent<Animator>().SetBool("isPopping", true);
+                //modify UI
                 playerHealth.TakeDamage(damage);
+                //in 2 seconds get the bubble back
                 Invoke("ReturnBubble", 2.0f);
                 return true;
             }
-
-
         }
         else
         {
@@ -92,16 +87,12 @@ public class MeleeEnemy : MonoBehaviour
 
         return hit.collider != null;
     }
-
-   // private void DamagePlayer()
-   // {
-     //   if (SeesPlayer())
-     //   {
-            //damage player
-            //take damage
-      //      Debug.Log("Player attacked");
-      //  }
-   // }
+    private void ReturnBubble()
+    {
+        _player.GetComponent<Animator>().SetBool("isPopping", false);
+        popped = false;
+        //Debug.Log(popped);
+    }
 
     //private void OnDrawGizmos()
     //{
@@ -109,23 +100,26 @@ public class MeleeEnemy : MonoBehaviour
     //    Gizmos.DrawWireCube(_boxCollider.bounds.center + transform.right * _range * transform.localScale.x * _colliderDistance, new Vector3(_boxCollider.bounds.size.x * _range, _boxCollider.bounds.size.y, _boxCollider.bounds.size.z));
     //}
 
-  //  private void OnCollisionEnter2D(Collision2D collision)
-   // {
-     //   if (!_type && !popped)
-      //  {
-            //Debug.Log("Player hurt");
-            //popped = true;
-            //_player.GetComponent<Animator>().SetBool("isPopping", true);
-            //Invoke("ReturnBubble", 5.0f);
-       // }
-   // }
+    // private void DamagePlayer()
+    // {
+    //   if (SeesPlayer())
+    //   {
+    //damage player
+    //take damage
+    //      Debug.Log("Player attacked");
+    //  }
+    // }
 
-    private void ReturnBubble()
-    {
-        _player.GetComponent<Animator>().SetBool("isPopping", false);
-        popped = false;
-        //Debug.Log(popped);
-    }
+    //  private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //   if (!_type && !popped)
+    //  {
+    //Debug.Log("Player hurt");
+    //popped = true;
+    //_player.GetComponent<Animator>().SetBool("isPopping", true);
+    //Invoke("ReturnBubble", 5.0f);
+    // }
+    // }
 
 
 }

@@ -14,24 +14,14 @@ public class CheckpointScript : MonoBehaviour
         colliderCheckpoint = GetComponent<BoxCollider2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Checkpoint got: " + this.gameObject);
         if (other.gameObject.CompareTag("Player"))
         {
+            //set the new checkpoint in respawn script to the checkpoint
             respawn.checkpoint = this.gameObject;
+
             colliderCheckpoint.enabled = false; //so you cant activate it again by going backwards
             Debug.Log(respawn.checkpoint);
         }

@@ -10,19 +10,6 @@ public class RespawnScript : MonoBehaviour
     public GameObject checkpoint;
     public AudioSource respawnClip;
     
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
        //instant death collider
@@ -35,7 +22,9 @@ public class RespawnScript : MonoBehaviour
 
     public void Respawn()
     {
+        //set new position
         player.transform.position = checkpoint.transform.position;
+        //play sound effect
         respawnClip.Play();
     }
 }
