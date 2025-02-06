@@ -209,7 +209,7 @@ public class MvtPlayer : MonoBehaviour
         //handle jump after coyote time is over so we cant fall and then get a double jump from it
         else if (_isFalling && _jumpBufferTimer > 0f && _numOfJumpsUsed < MoveStats.NumJumpsAllowed - 1) ////////
         {
-            InitiateJump(2);
+            InitiateJump(1); //i changed my mind and put a 1 instead
             _isFastFalling = false;
         }
 
