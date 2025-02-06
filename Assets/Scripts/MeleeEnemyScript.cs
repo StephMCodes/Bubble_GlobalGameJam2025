@@ -19,7 +19,7 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask _playerLayer;
 
     [Header("Enemy Type (F: obstacle, T: NPC")]
-    [SerializeField] private bool _type;
+    [SerializeField] private bool isGhost;
     public static bool popped = false;
 
     [Header("Player")]
@@ -63,7 +63,7 @@ public class MeleeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (_type && !popped)
+            if (isGhost && !popped)
             {
                 popped = true;
                 //play ghost attack anim
@@ -79,7 +79,7 @@ public class MeleeEnemy : MonoBehaviour
         }
         else
         {
-            if (_type)
+            if (isGhost)
             {
                 animator.SetBool("isAttack", false);
             }
@@ -112,7 +112,7 @@ public class MeleeEnemy : MonoBehaviour
 
     //  private void OnCollisionEnter2D(Collision2D collision)
     // {
-    //   if (!_type && !popped)
+    //   if (!isGhost && !popped)
     //  {
     //Debug.Log("Player hurt");
     //popped = true;
