@@ -7,7 +7,7 @@ public class RespawnScript : MonoBehaviour
     //get reference to player and checkpoint
     [Header("References")]
     public GameObject player;
-    public GameObject checkpoint;
+    public static GameObject checkpoint;
     public AudioSource respawnClip;
     
     private void OnTriggerEnter2D(Collider2D other)

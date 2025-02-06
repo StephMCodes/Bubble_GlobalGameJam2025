@@ -20,10 +20,10 @@ public class CheckpointScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //set the new checkpoint in respawn script to the checkpoint
-            respawn.checkpoint = this.gameObject;
+            RespawnScript.checkpoint = this.gameObject;
 
             colliderCheckpoint.enabled = false; //so you cant activate it again by going backwards
-            Debug.Log(respawn.checkpoint);
+            Debug.Log(RespawnScript.checkpoint);
         }
     }
 }
