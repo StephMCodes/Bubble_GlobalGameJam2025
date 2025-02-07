@@ -10925,7 +10925,6 @@ GameObject:
   - component: {fileID: 2079867393}
   - component: {fileID: 2079867395}
   - component: {fileID: 2079867396}
-  - component: {fileID: 2079867397}
   m_Layer: 3
   m_Name: item-spikes (1)
   m_TagString: Untagged
@@ -11066,21 +11065,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.712181, y: 0.9945717}
   m_EdgeRadius: 0
---- !u!111 &2079867397
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079867392}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9fc314c40ecca99409c0d51a9fa3b1c4, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &2137625939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4150677787163940096, guid: ddba5a18685773d45b26ba2efab7a1ab, type: 3}
