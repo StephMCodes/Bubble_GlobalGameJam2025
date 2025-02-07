@@ -2169,6 +2169,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.781393, y: 1.9999557}
   m_EdgeRadius: 0
+--- !u!1 &606852108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606852109}
+  m_Layer: 0
+  m_Name: Interrupters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &606852109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606852108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.589126, y: 26.17407, z: 0.9483431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1064406998}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &639213980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8326869628956148053, guid: fb9d2b107c0067341ab816f5eeeabe18, type: 3}
@@ -4228,12 +4260,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064406996}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.17, y: 1.9, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.4191256, y: -24.27407, z: -0.9483431}
   m_LocalScale: {x: 0.057596482, y: 0.057596482, z: 0.057596482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 606852109}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1064406999
 BoxCollider2D:
@@ -10485,8 +10517,8 @@ SceneRoots:
   - {fileID: 383436289}
   - {fileID: 734339912}
   - {fileID: 4885097433455072485}
-  - {fileID: 1064406998}
   - {fileID: 250055102}
   - {fileID: 1787485905}
   - {fileID: 1113780721}
   - {fileID: 381702942}
+  - {fileID: 606852109}
