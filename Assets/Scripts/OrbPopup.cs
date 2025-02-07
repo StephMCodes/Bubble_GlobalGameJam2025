@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class OrbPopup : MonoBehaviour
 {
     public GameObject orb;
+    private BoxCollider2D boxColliderButton;
 
     private bool playerNearby = false;
 
+    private void Awake()
+    {
+        boxColliderButton = GetComponent<BoxCollider2D>();
+    }
     void Update()
     {
         if (playerNearby) 
@@ -32,6 +37,7 @@ public class OrbPopup : MonoBehaviour
         if (other.CompareTag("Player")) //detects the collsion with player
         {
             playerNearby = false;
+            boxColliderButton.enabled = false;
         }
     }
 
