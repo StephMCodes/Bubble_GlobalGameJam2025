@@ -3148,7 +3148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &954454535
 AudioListener:
   m_ObjectHideFlags: 0
@@ -8340,7 +8340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8863288584404910637, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: m_Size.y
-      value: 1.5693656
+      value: 2.6117883
       objectReference: {fileID: 0}
     - target: {fileID: 8863288584404910637, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: m_Offset.x
@@ -8348,7 +8348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8863288584404910637, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: m_Offset.y
-      value: -2.3945875
+      value: -1.8733761
       objectReference: {fileID: 0}
     - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: _player
@@ -8664,19 +8664,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8863288584404910637, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: m_Size.x
-      value: 7.579756
+      value: 7.279855
       objectReference: {fileID: 0}
     - target: {fileID: 8863288584404910637, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: m_Size.y
-      value: 1.5074993
+      value: 2.691887
       objectReference: {fileID: 0}
     - target: {fileID: 8863288584404910637, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: m_Offset.x
-      value: 0.12795925
+      value: -0.021991253
       objectReference: {fileID: 0}
     - target: {fileID: 8863288584404910637, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: m_Offset.y
-      value: -2.4255207
+      value: -1.8333268
       objectReference: {fileID: 0}
     - target: {fileID: 9023705570537629679, guid: 0f92cc5e2493beb4281befc84f847c94, type: 3}
       propertyPath: _player
