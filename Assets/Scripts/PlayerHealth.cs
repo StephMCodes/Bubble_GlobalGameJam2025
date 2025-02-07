@@ -20,7 +20,6 @@ public class PlayerHealth : MonoBehaviour
     {
         //sets current health yp full
         health = maxHealth;
-        checkpoint.transform.position = player.GetComponent<Transform>().position;
     }
 
     //called whenever damage is taken

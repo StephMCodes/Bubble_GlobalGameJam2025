@@ -10,10 +10,6 @@ public class RespawnScript : MonoBehaviour
     [SerializeField] public static GameObject checkpoint;
     public AudioSource respawnClip;
 
-    private void Start()
-    {
-       checkpoint.transform.position = player.GetComponent<Transform>().position;
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
        //instant death collider
