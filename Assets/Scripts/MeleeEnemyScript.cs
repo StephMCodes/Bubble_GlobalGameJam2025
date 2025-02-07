@@ -35,6 +35,7 @@ public class MeleeEnemy : MonoBehaviour
     private EnemyPatrol enemyPatrol;
     private Animator animator;
 
+
     private void Awake()
     {
         //anim get component
