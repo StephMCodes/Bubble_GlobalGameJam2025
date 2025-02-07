@@ -29,8 +29,7 @@ public class PlayerHealth : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            Respawn();
-            health = maxHealth;
+            Invoke("Respawn", 1.0f);
         }
     }
 
@@ -38,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
     {
         //set new position
         player.transform.position = checkpoint.transform.position;
+        //regen
+        health = maxHealth;
         //play sound effect
         respawnClip.Play();
     }

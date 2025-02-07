@@ -7800,7 +7800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000017881, y: 0.1}
+  m_AnchoredPosition: {x: -1, y: 0.1}
   m_SizeDelta: {x: 126.56071, y: 104.4783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884618178
@@ -7830,7 +7830,10 @@ MonoBehaviour:
     Hold SPACE to
     jump higher
 
-    Press SHIFT to move faster'
+    Hold SHIFT to move faster
+
+    Get the 3 orbs in each level
+    to progress'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6be42693dba977940818066e72dc4279, type: 2}
   m_sharedMaterial: {fileID: 3250970367791450720, guid: 6be42693dba977940818066e72dc4279, type: 2}
