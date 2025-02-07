@@ -7,9 +7,13 @@ public class RespawnScript : MonoBehaviour
     //get reference to player and checkpoint
     [Header("References")]
     public GameObject player;
-    public static GameObject checkpoint;
+    [SerializeField] public static GameObject checkpoint;
     public AudioSource respawnClip;
-    
+
+    private void Start()
+    {
+       checkpoint.transform.position = player.GetComponent<Transform>().position;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
        //instant death collider
