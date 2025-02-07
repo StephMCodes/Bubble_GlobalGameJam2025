@@ -4771,7 +4771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1212570062
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7641,7 +7641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000017881, y: -4}
+  m_AnchoredPosition: {x: -0.0000017881, y: 0.1}
   m_SizeDelta: {x: 126.56071, y: 104.4783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884618178
@@ -7671,9 +7671,7 @@ MonoBehaviour:
     Hold SPACE to
     jump higher
 
-    SHIFT to move faster
-
-    PRESS E to collect orbs'
+    Press SHIFT to move faster'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6be42693dba977940818066e72dc4279, type: 2}
   m_sharedMaterial: {fileID: 3250970367791450720, guid: 6be42693dba977940818066e72dc4279, type: 2}
