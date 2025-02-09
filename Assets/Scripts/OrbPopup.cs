@@ -13,6 +13,7 @@ public class OrbPopup : MonoBehaviour
     private void Awake()
     {
         boxColliderButton = GetComponent<BoxCollider2D>();
+
     }
     void Update()
     {
