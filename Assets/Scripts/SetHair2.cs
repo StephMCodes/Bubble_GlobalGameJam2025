@@ -11,6 +11,8 @@ public class SetHair2 : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _animator.SetBool("isShortHair", false);
+        _animator.SetBool("isLongHair", false);
         _animator.SetBool("isMediumHair", true);
+      
     }
 }
