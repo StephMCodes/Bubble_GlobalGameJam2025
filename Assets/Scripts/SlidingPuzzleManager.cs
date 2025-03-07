@@ -43,8 +43,16 @@ public class SlidingPuzzleManager : MonoBehaviour
                 else
                 {
                     //map the uv coords appropriately from 0 to 1
-                   // float gap = gapThickness / 2;
-                   // Vector2[] uv = NewVector
+                    float gap = gapThickness / 2;
+                    Mesh mesh = piece.GetComponent<MeshFilter>().mesh;
+                    Vector2[] uv = new Vector2[4];
+                    // UV coord order: (0, 1), (1, 1), (0, 0), (1, 0)
+                    uv[0] = new Vector2((width * col) + gap, 1 - ((width * (row + 1)) - gap));
+                    uv[1] = new Vector2((width * (col + 1)) - gap, 1 - ((width * (row + 1)) - gap));
+                    uv[2] = new Vector2((width * col) + gap, 1 - ((width * row) + gap));
+                    uv[3] = new Vector2((width * (col + 1)) - gap, 1 - ((width * row) + gap));
+                    // Assign our new UVs to the mesh.
+                    mesh.uv = uv;
                 }
             }
 
