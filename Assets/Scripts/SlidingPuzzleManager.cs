@@ -40,6 +40,12 @@ public class SlidingPuzzleManager : MonoBehaviour
                     emptyLocation = (size * size) - 1;
                     piece.gameObject.SetActive(false);
                 }
+                else
+                {
+                    //map the uv coords appropriately from 0 to 1
+                   // float gap = gapThickness / 2;
+                   // Vector2[] uv = NewVector
+                }
             }
 
         }
@@ -49,7 +55,7 @@ public class SlidingPuzzleManager : MonoBehaviour
     {
         //size x size grid
         size = 3;
-        //CreateGamePieces(0.01f); //the parameter is thickness between pieces
+        CreateGamePieces(0.01f); //the parameter is thickness between pieces
     }
 
     // Update is called once per frame
