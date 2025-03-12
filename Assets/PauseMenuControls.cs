@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuControls : MonoBehaviour
 {
-
+    public string levelToLoad;
     public void QuitGame()
     {
         Application.Quit();
@@ -13,7 +13,7 @@ public class PauseMenuControls : MonoBehaviour
 
     public void ReturntoMainMenu()
     {
-
+        SceneManager.LoadScene(levelToLoad);    
     }
 
 }

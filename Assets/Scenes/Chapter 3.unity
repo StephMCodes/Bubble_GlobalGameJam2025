@@ -7799,6 +7799,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a3db037ad8f74774db09d8a39f65ad93, type: 3}
+    - target: {fileID: 2359458043952290639, guid: ca30e4d14636cda4c96d72f3c78308da, type: 3}
+      propertyPath: levelToLoad
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 3552463684805266982, guid: ca30e4d14636cda4c96d72f3c78308da, type: 3}
       propertyPath: m_Color.b
       value: 0.5025057

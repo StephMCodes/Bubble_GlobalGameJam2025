@@ -6383,6 +6383,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4ff16e49df2d6b44f99e0bf5cd0d1b81, type: 3}
+    - target: {fileID: 2359458043952290639, guid: ca30e4d14636cda4c96d72f3c78308da, type: 3}
+      propertyPath: levelToLoad
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 4588103193777663036, guid: ca30e4d14636cda4c96d72f3c78308da, type: 3}
       propertyPath: m_Name
       value: Settings Panel Popup
