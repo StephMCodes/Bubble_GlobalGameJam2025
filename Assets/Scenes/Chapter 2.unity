@@ -843,7 +843,7 @@ Transform:
   m_GameObject: {fileID: 192982469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.57, y: -3.94, z: -0.208}
+  m_LocalPosition: {x: 105.57, y: -3.98, z: -0.208}
   m_LocalScale: {x: 0.060574647, y: 0.060574647, z: 0.060574647}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12305,6 +12305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3445771759057646723, guid: d288e9ed7c91fc247b52a3f0eb5afcd3, type: 3}
+      propertyPath: levelToLoad
+      value: Chapter3 StoryTelling
+      objectReference: {fileID: 0}
     - target: {fileID: 7151178995150860457, guid: d288e9ed7c91fc247b52a3f0eb5afcd3, type: 3}
       propertyPath: m_Name
       value: Door Change Level
@@ -12315,7 +12319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7151178995150860457, guid: d288e9ed7c91fc247b52a3f0eb5afcd3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7183771056399905769, guid: d288e9ed7c91fc247b52a3f0eb5afcd3, type: 3}
       propertyPath: m_LocalPosition.x

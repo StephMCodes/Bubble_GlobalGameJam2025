@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ani : MonoBehaviour
 {
-
+    public string levelToLoad;
    public void ChangeScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(levelToLoad);
     }
     // Start is called before the first frame update
     void Start()

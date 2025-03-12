@@ -1799,6 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558e60ee4daeb6f43adf30688f6bb53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelToLoad: Chapter1-StoryTelling
 --- !u!1 &798647252
 GameObject:
   m_ObjectHideFlags: 0

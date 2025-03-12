@@ -16690,6 +16690,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3312740531147965160, guid: e5b9018da34e65b49bc2456543b90506, type: 3}
+      propertyPath: levelToLoad
+      value: Chapter2-StoryTelling
+      objectReference: {fileID: 0}
     - target: {fileID: 6996051436393629378, guid: e5b9018da34e65b49bc2456543b90506, type: 3}
       propertyPath: m_Name
       value: Change Level Door

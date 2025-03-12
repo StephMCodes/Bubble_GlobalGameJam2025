@@ -14003,6 +14003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc7cd41d558a7746a967d343fba4b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelToLoad: Chapter3-Shootup
 --- !u!4 &1662853292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7032653840509552002, guid: e5b9018da34e65b49bc2456543b90506, type: 3}
