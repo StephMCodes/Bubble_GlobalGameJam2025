@@ -86,7 +86,7 @@ public class SlidingPuzzleManager : MonoBehaviour
     {
         int count = 0;
         int last = 0;
-        int inversionsLeft = (100); //it needs to be even to be solvable
+        int inversionsLeft = (80); //it needs to be even to be solvable
         while (inversionsLeft != 0)
         {
             // Pick a random location.
